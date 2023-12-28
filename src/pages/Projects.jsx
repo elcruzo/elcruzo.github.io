@@ -2,10 +2,10 @@ import React from 'react';
 import '../App.css';
 
 
-function Aboutme() {
+function Projects() {
     return (
-        <h1>About me</h1>
+        <h1>Projects</h1>
     )
 }
 
-export default Aboutme
+export default Projects

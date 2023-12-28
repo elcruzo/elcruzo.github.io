@@ -5,11 +5,16 @@
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
-  padding: 0 1rem;
+  padding: 0 1rem 3.5rem 0;
 }
 
 .logo {
   font-size: 2rem;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
 }
 
 .nav ul {
@@ -32,4 +37,14 @@
 
 .nav li:hover {
   background-color: #777;
+}
+
+.greetings {
+  color: #606060;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 6.45px;
 }

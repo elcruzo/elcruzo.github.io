@@ -1,10 +1,12 @@
+import React from 'react';
 import './App.css'
+import Home from './Home'
 
 function App() {
 
   return (
     <>
-      <h1>The start of an gem</h1>
+      <Home />
     </>
   )
 }

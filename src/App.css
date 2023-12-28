@@ -46,5 +46,11 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  letter-spacing: 6.45px;
+  letter-spacing: 0.403rem;
+}
+
+.header-hr {
+  width: 78%;
+  size: 100px;
+  color: #635BE6;
 }

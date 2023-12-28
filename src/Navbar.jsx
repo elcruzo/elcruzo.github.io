@@ -4,7 +4,7 @@ import './App.css';
 function Navbar() {
     return (
         <nav className='nav'>
-            <a href="/" className="logo" title='elcruzo_logo'><span style={{color: '#635BE6'}}>El</span>Cruzo</a>
+            <a href="/" className="logo" title='elcruzo_logo'><span className='alt-color'>El</span>Cruzo</a>
             <ul>
                 <li>
                     <a href="/aboutme">About Me</a>

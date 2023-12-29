@@ -68,6 +68,7 @@
 
 .intro-2 {
   max-width: 78%;
+  line-height: normal;
 }
 
 /* FOOTER */
@@ -178,4 +179,8 @@
 
 .button-2:hover {
   background-color: #E0E0E0;
+}
+
+.highlight-card {
+  border: 1px solid black;
 }

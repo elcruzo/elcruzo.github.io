@@ -1,6 +1,7 @@
 import React from 'react';
 import './index.css';
 import Navbar from './Navbar';
+import Timeline from './Timeline';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF } from '@fortawesome/free-brands-svg-icons';
@@ -75,7 +76,17 @@ function Home() {
             </div>
           </div>
 
-          
+          <div className='row'>
+            <div className='col-md-1'>
+
+            </div>
+            <div className='col-md-10'>
+              <Timeline />
+            </div>
+            <div className='col-md-1'>
+
+            </div>
+          </div>
         </>
     )
 }

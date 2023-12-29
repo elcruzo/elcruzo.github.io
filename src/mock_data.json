@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "header": "World ElCruzo Day",
+        "date": "200* December 24",
+        "list1": "ElCruzo was born!"
+    },
+
+    {
+        "id": 2,
+        "header": "Student Government",
+        "date": "2015 October",
+        "list1": "Elected Head Boy in Primary 6 (equivalent to 5th Grade).",
+        "list2": "Represented my school at the Annual Student Leadership Initiative Summit (SMI), winning first place in a mini-competition among 100+ schools.",
+        "list3": "Had one of the top results on the Common Entrance Examination, the final elementary school exam."
+    }
+]

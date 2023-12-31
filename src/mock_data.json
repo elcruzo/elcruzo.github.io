@@ -13,5 +13,25 @@
         "list1": "Elected Head Boy in Primary 6 (equivalent to 5th Grade).",
         "list2": "Represented my school at the Annual Student Leadership Initiative Summit (SMI), winning first place in a mini-competition among 100+ schools.",
         "list3": "Had one of the top results on the Common Entrance Examination, the final elementary school exam."
+    },
+
+    {
+        "id" : 3,
+        "header" : "",
+        "date" : "2018 September — December",
+        "list1" : "Was selected to be a school prefect in my freshman year of high school (a position that was only open to Juniors and Seniors",
+        "list2" : "Spearheaded a movement to raise funds (up to ₦100,000) from volunteers and notable school alumni for a charity donation to a local orphanage home near my school"
+    },
+
+    {
+        "id" : 4,
+        "header" : "Dived in to the world of coding!",
+        "date" : "2019 May — August",
+        "list1" : "Learned the syntax of Python for the first time",
+        "list2" : "Designed a simple calculator in Python",
+        "list3" : "Built a TicTacToe game with Python"
     }
+
 ]
+
+

@@ -77,15 +77,7 @@ function Home() {
           </div>
 
           <div className='row'>
-            <div className='col-md-1'>
-
-            </div>
-            <div className='col-md-10'>
               <Timeline />
-            </div>
-            <div className='col-md-1'>
-
-            </div>
           </div>
         </>
     )

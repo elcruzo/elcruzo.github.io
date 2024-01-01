@@ -85,19 +85,43 @@ const TwoColumnGrid = () => {
     return [];
   });
 
-  const gridContainerStyle = {
+//   const gridContainerStyle = {
+//     display: 'grid',
+//     gridTemplateColumns: 'repeat(2, 1fr)',
+//     gridGap: '86px',
+//     position: 'relative',
+//   };
+
+    const gridContainerStyle = {
     display: 'grid',
     gridTemplateColumns: 'repeat(2, 1fr)',
-    gridGap: '86px',
+    gridGap: '1.5rem', // Convert to rem
     position: 'relative',
+    maxWidth: '50rem', // Convert to rem, set your desired max-width
+    margin: '0 auto', // Center the container
   };
 
-  const cellStyle = {
+//   const cellStyle = {
+//     backgroundColor: '#e0e0e0',
+//     padding: '2.25rem',
+//     width: '18.75rem', 
+//     border: '0.0625rem solid #ccc', 
+//     overflow: 'hidden',
+//     borderRadius: '1.5rem', 
+//   };
+
+    const cellStyle = {
     backgroundColor: '#e0e0e0',
-    padding: '36px',
-    width: '300px',
-    border: '1px solid #ccc',
+    padding: '2.25rem',
+    border: '0.0625rem solid #ccc',
     overflow: 'hidden',
+    borderRadius: '1.5rem',
+    margin: '0 auto', // Center the cell
+  };
+  
+  const headerStyle = {
+    fontSize: '2rem', // Adjust the font size as needed
+    marginBottom: '1rem', // Adjust the margin as needed
   };
 
   const linkStyle = {
@@ -106,32 +130,33 @@ const TwoColumnGrid = () => {
   };
   
   const renderTextContent = (text) => {
-    const linkRegex = /<a.*?href=['"](.*?)['"].*?>(.*?)<\/a>/g;
-  
-    return text.split('\n').map((line, index) => (
-      <React.Fragment key={index}>
-        {index > 0 && <br />}
-        {line.match(linkRegex) ? (
-          line.split(linkRegex).map((part, i) => (
-            i % 3 === 0 ? (
-              <span key={i}>{part}</span>
+        const linkRegex = /<a.*?href=['"](.*?)['"].*?>(.*?)<\/a>/g;
+      
+        return text.split('\n').map((line, index) => (
+          <React.Fragment key={index}>
+            {index > 0 && <br />}
+            {line.match(linkRegex) ? (
+              line.split(linkRegex).map((part, i) => (
+                i % 3 === 0 ? (
+                  <span key={i}>{part}</span>
+                ) : (
+                  i % 3 === 1 ? (
+                    <a key={i} href={part} target="_blank" rel="noopener noreferrer" style={linkStyle}>
+                      {line.split(linkRegex)[i + 1]}
+                    </a>
+                  ) : null
+                )
+              ))
             ) : (
-              i % 3 === 1 ? (
-                <a key={i} href={part} target="_blank" rel="noopener noreferrer" style={linkStyle}>
-                  {line.split(linkRegex)[i + 1]}
-                </a>
-              ) : null
-            )
-          ))
-        ) : (
-          <span>{line}</span>
-        )}
-      </React.Fragment>
-    ));
-  };
+              <span>{line}</span>
+            )}
+          </React.Fragment>
+        ));
+      };
+
 
   return (
-    <div ref={gridRef} style={gridContainerStyle}>
+    <div ref={gridRef} style={gridContainerStyle} className="container">
       <svg
         style={{
           position: 'absolute',
@@ -152,14 +177,15 @@ const TwoColumnGrid = () => {
             gridRow: index === 0 ? 'span 1' : 'span 2',
             marginTop: index === 1 ? secondCellMarginTop : '',
           }}
+          className="mb-4"
         >
-          <h2>{item.header}</h2>
+          <h2 style={headerStyle}>{item.header}</h2>
           <p>{item.date}</p>
           <ul>
             <li>{renderTextContent(item.list1)}</li>
             {item.list2 && <li>{renderTextContent(item.list2)}</li>}
             {item.list3 && <li>{renderTextContent(item.list3)}</li>}
-            </ul>
+          </ul>
         </div>
       ))}
     </div>

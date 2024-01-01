@@ -182,9 +182,17 @@ const TwoColumnGrid = () => {
           <h2 style={headerStyle}>{item.header}</h2>
           <p>{item.date}</p>
           <ul>
-            <li>{renderTextContent(item.list1)}</li>
-            {item.list2 && <li>{renderTextContent(item.list2)}</li>}
-            {item.list3 && <li>{renderTextContent(item.list3)}</li>}
+            <li>{renderTextContent(item.list1)}</li><span></span>
+            {item.list2 && (
+            <>
+            <li>{renderTextContent(item.list2)}</li>
+            <button><strong>... Read More</strong></button>
+            </>)}
+            {item.list3 && (
+            <>
+            <li>{renderTextContent(item.list3)}</li>
+            <button><strong>... Read More</strong></button>
+            </>)}
           </ul>
         </div>
       ))}

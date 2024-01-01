@@ -8,8 +8,10 @@ const TwoColumnGrid = () => {
   const [cellsRect, setCellsRect] = useState([]);
 //   const [isOpenArray, setIsOpenArray] = useState(Array(jsonData.length).fill(false));
   const [isOpenArrays, setIsOpenArrays] = useState(Array(jsonData.length).fill([]));
+  const [showReadMoreButton, setShowReadMoreButton] = useState(false);
 
   const gridRef = useRef(null);
+  const ref = useRef(null);
 
   const calculateRects = () => {
     requestAnimationFrame(() => {
@@ -130,6 +132,14 @@ const TwoColumnGrid = () => {
     color: '#007bff', // Adjust the link color as needed
     textDecoration: 'underline',
   };
+
+  const listStyle = {
+    listStyleType: 'disc',
+    WebkitLineClamp: 4,
+    WebkitBoxOrient: 'vertical',
+    overflow: 'hidden',
+    display: '-webkit-box',
+  }
   
   const renderTextContent = (text) => {
         const linkRegex = /<a.*?href=['"](.*?)['"].*?>(.*?)<\/a>/g;
@@ -196,25 +206,31 @@ const TwoColumnGrid = () => {
           <h2 style={headerStyle}>{item.header}</h2>
           <p>{item.date}</p>
           <ul className='bulletpoints'>
-            <li><span>{renderTextContent(item.list1)}</span></li>
+            <li><span style={isOpenArrays[cellIndex]?.[0] ? null : listStyle}>{renderTextContent(item.list1)}</span></li>
+            {showReadMoreButton && (
             <button onClick={() => toggleIsOpen(cellIndex, 0)} className='readmore-button'>
                 <strong>{isOpenArrays[cellIndex]?.[0] ? 'Read Less' : 'Read More'}</strong>
             </button>
+            )}
 
             {item.list2 && (
             <>
-            <li><span>{renderTextContent(item.list2)}</span></li>
+            <li><span style={isOpenArrays[cellIndex]?.[1] ? null : listStyle}>{renderTextContent(item.list2)}</span></li>
+            {showReadMoreButton && (
             <button onClick={() => toggleIsOpen(cellIndex, 1)} className='readmore-button'>
                 <strong>{isOpenArrays[cellIndex]?.[1] ? 'Read Less' : 'Read More'}</strong>
             </button>
+            )}
             </>)}
 
             {item.list3 && (
             <>
-            <li><span>{renderTextContent(item.list3)}</span></li>
+            <li><span style={isOpenArrays[cellIndex]?.[2] ? null : listStyle}>{renderTextContent(item.list3)}</span></li>
+            {showReadMoreButton && (
             <button onClick={() => toggleIsOpen(cellIndex, 2)} className='readmore-button'>
                 <strong>{isOpenArrays[cellIndex]?.[2] ? 'Read Less' : 'Read More'}</strong>
             </button>
+            )}
             </>)}
           </ul>
         </div>

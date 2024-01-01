@@ -7,12 +7,12 @@
     },
 
     {
-        "id": 2,
-        "header": "Student Government",
-        "date": "2015 October",
-        "list1": "Elected Head Boy in Primary 6 (equivalent to 5th Grade).",
-        "list2": "Represented my school at the Annual Student Leadership Initiative Summit (SMI), winning first place in a mini-competition among 100+ schools.",
-        "list3": "<a href='http://google.com/'>ColorStack</a>. t the Annual Student Leadership Initiative Summit (SMI), winning first place in a mini-competition among 100+ scho"
+        "id" : 2,
+        "header" : "Dived in to the world of coding!",
+        "date" : "2019 May — August",
+        "list1" : "Learned the syntax of Python for the first time",
+        "list2" : "Designed a simple calculator in Python",
+        "list3" : "Built a TicTacToe game with Python"
     },
 
     {
@@ -39,7 +39,16 @@
         "date" : "2019 May — August",
         "list1" : "Learned the syntax of Python for the first time",
         "list2" : "Designed a simple calculator in Python",
-        "list3" : "Built a TicTacToe game with Python"
+        "list3" : "Built a TicTacToe game with Python  Head Boy in Primary 6 (equivalent to 5t  Head Boy in Primary 6 (equivalent to 5t  Head Boy in Primary 6 (equivalent to 5t  Head Boy in Primary 6 (equivalent to 5t  Head Boy in Primary 6 (equivalent to 5t  Head Boy in Primary 6 (equivalent to 5t"
+    },
+
+    {
+        "id": 6,
+        "header": "Student Government",
+        "date": "2015 October",
+        "list1": "Elected Head Boy in Primary 6 (equivalent to 5th Grade).",
+        "list2": "Represented my school at the Annual Student Leadership Initiative Summit (SMI), winning first place in a mini-competition among 100+ schools.",
+        "list3": "<a href='http://google.com/'>ColorStack</a>. t the Annual Student Leadership Initiative Summit (SMI), winning first place in a mini-competition among 100+ scholculator in Python"
     }
 ]
 

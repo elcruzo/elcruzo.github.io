@@ -201,3 +201,14 @@ function Highlight() {
 }
 
 export default Highlight;
+
+
+
+// {
+//     "id": 2,
+//     "header": "Student Government",
+//     "date": "2015 October",
+//     "list1": "Elected Head Boy in Primary 6 (equivalent to 5th Grade).",
+//     "list2": "Represented my school at the Annual Student Leadership Initiative Summit (SMI), winning first place in a mini-competition among 100+ schools.",
+//     "list3": "<a href='http://google.com/'>ColorStack</a>. t the Annual Student Leadership Initiative Summit (SMI), winning first place in a mini-competition among 100+ scholculator in Python"
+// },

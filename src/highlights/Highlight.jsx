@@ -6,6 +6,8 @@ const TwoColumnGrid = () => {
   const [secondCellMarginTop, setSecondCellMarginTop] = useState('');
   const [gridRect, setGridRect] = useState([]);
   const [cellsRect, setCellsRect] = useState([]);
+//   const [isOpenArray, setIsOpenArray] = useState(Array(jsonData.length).fill(false));
+  const [isOpenArrays, setIsOpenArrays] = useState(Array(jsonData.length).fill([]));
 
   const gridRef = useRef(null);
 
@@ -154,6 +156,18 @@ const TwoColumnGrid = () => {
         ));
       };
 
+    //   const toggleIsOpen = (index) => {
+    //     const newArray = [...isOpenArray];
+    //     newArray[index] = !newArray[index];
+    //     setIsOpenArray(newArray);
+    //   };
+
+      const toggleIsOpen = (cellIndex, listItemIndex) => {
+        const newArrays = [...isOpenArrays];
+        newArrays[cellIndex] = [...(newArrays[cellIndex] || [])];
+        newArrays[cellIndex][listItemIndex] = !newArrays[cellIndex][listItemIndex];
+        setIsOpenArrays(newArrays);
+      };
 
   return (
     <div ref={gridRef} style={gridContainerStyle} className="container">
@@ -169,29 +183,38 @@ const TwoColumnGrid = () => {
         {lines}
         {paths}
       </svg>
-      {jsonData.map((item, index) => (
+      {jsonData.map((item, cellIndex) => (
         <div
-          key={index}
+          key={cellIndex}
           style={{
             ...cellStyle,
-            gridRow: index === 0 ? 'span 1' : 'span 2',
-            marginTop: index === 1 ? secondCellMarginTop : '',
+            gridRow: cellIndex === 0 ? 'span 1' : 'span 2',
+            marginTop: cellIndex === 1 ? secondCellMarginTop : '',
           }}
           className="mb-4"
         >
           <h2 style={headerStyle}>{item.header}</h2>
           <p>{item.date}</p>
-          <ul>
-            <li>{renderTextContent(item.list1)}</li><span></span>
+          <ul className='bulletpoints'>
+            <li><span>{renderTextContent(item.list1)}</span></li>
+            <button onClick={() => toggleIsOpen(cellIndex, 0)} className='readmore-button'>
+                <strong>{isOpenArrays[cellIndex]?.[0] ? 'Read Less' : 'Read More'}</strong>
+            </button>
+
             {item.list2 && (
             <>
-            <li>{renderTextContent(item.list2)}</li>
-            <button><strong>... Read More</strong></button>
+            <li><span>{renderTextContent(item.list2)}</span></li>
+            <button onClick={() => toggleIsOpen(cellIndex, 1)} className='readmore-button'>
+                <strong>{isOpenArrays[cellIndex]?.[1] ? 'Read Less' : 'Read More'}</strong>
+            </button>
             </>)}
+
             {item.list3 && (
             <>
-            <li>{renderTextContent(item.list3)}</li>
-            <button><strong>... Read More</strong></button>
+            <li><span>{renderTextContent(item.list3)}</span></li>
+            <button onClick={() => toggleIsOpen(cellIndex, 2)} className='readmore-button'>
+                <strong>{isOpenArrays[cellIndex]?.[2] ? 'Read Less' : 'Read More'}</strong>
+            </button>
             </>)}
           </ul>
         </div>

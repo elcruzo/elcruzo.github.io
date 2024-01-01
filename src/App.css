@@ -184,3 +184,18 @@
 .highlight-card {
   margin-top: 10vh;
 }
+
+.readmore-button {
+  border: none;
+  background-color: inherit;
+  padding: 14px Zopx; font-size: 16px; cursor: pointer;
+  display: inline-block;
+}
+
+.bulletpoints li span{
+  list-style-type: disc;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  display: -webkit-box;
+}

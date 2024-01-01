@@ -95,7 +95,7 @@ const TwoColumnGrid = () => {
     const gridContainerStyle = {
     display: 'grid',
     gridTemplateColumns: 'repeat(2, 1fr)',
-    gridGap: '1.5rem', // Convert to rem
+    gridGap: '5rem', // Convert to rem
     position: 'relative',
     maxWidth: '50rem', // Convert to rem, set your desired max-width
     margin: '0 auto', // Center the container

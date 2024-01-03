@@ -10,11 +10,13 @@ const TwoColumnGrid = () => {
   const [cellsRect, setCellsRect] = useState([]);
 //   const [isOpenArray, setIsOpenArray] = useState(Array(jsonData.length).fill(false));
   const [isOpenArrays, setIsOpenArrays] = useState(Array(jsonData.length).fill([]));
-  const [showReadMoreButton, setShowReadMoreButton] = useState(false);
 
   const gridRef = useRef(null);
+<<<<<<< HEAD
   const ref = useRef(null);
   const liRef = useRef([]);
+=======
+>>>>>>> parent of 80047ec (implementing useEffect)
 
   const calculateRects = () => {
     requestAnimationFrame(() => {
@@ -120,6 +122,7 @@ const TwoColumnGrid = () => {
     marginBottom: '1rem', // Adjust the margin as needed
   };
 
+<<<<<<< HEAD
 
   const listStyle = {
     listStyleType: 'disc',
@@ -128,6 +131,37 @@ const TwoColumnGrid = () => {
     overflow: 'hidden',
     display: '-webkit-box',
   }
+=======
+  const linkStyle = {
+    color: '#007bff', // Adjust the link color as needed
+    textDecoration: 'underline',
+  };
+  
+  const renderTextContent = (text) => {
+        const linkRegex = /<a.*?href=['"](.*?)['"].*?>(.*?)<\/a>/g;
+      
+        return text.split('\n').map((line, index) => (
+          <React.Fragment key={index}>
+            {index > 0 && <br />}
+            {line.match(linkRegex) ? (
+              line.split(linkRegex).map((part, i) => (
+                i % 3 === 0 ? (
+                  <span key={i}>{part}</span>
+                ) : (
+                  i % 3 === 1 ? (
+                    <a key={i} href={part} target="_blank" rel="noopener noreferrer" style={linkStyle}>
+                      {line.split(linkRegex)[i + 1]}
+                    </a>
+                  ) : null
+                )
+              ))
+            ) : (
+              <span>{line}</span>
+            )}
+          </React.Fragment>
+        ));
+      };
+>>>>>>> parent of 80047ec (implementing useEffect)
 
     const toggleIsOpen = (cellIndex, listItemIndex) => {
     const newArrays = [...isOpenArrays];
@@ -163,6 +197,7 @@ const TwoColumnGrid = () => {
           <h2 style={headerStyle}>{item.header}</h2>
           <p>{item.date}</p>
           <ul className='bulletpoints'>
+<<<<<<< HEAD
           {item.lists.map((list, listItemIndex) => (
               <li key={listItemIndex}>
                 <span style={isOpenArrays[cellIndex]?.[listItemIndex] ? null : listStyle} ref={liRef.current[cellIndex]}>
@@ -180,20 +215,32 @@ const TwoColumnGrid = () => {
             <>
             <li><span style={isOpenArrays[cellIndex]?.[1] ? null : listStyle} ref={ref}>{renderTextContent(item.list2)}</span></li>
             {showReadMoreButton && (
+=======
+            <li><span>{renderTextContent(item.list1)}</span></li>
+            <button onClick={() => toggleIsOpen(cellIndex, 0)} className='readmore-button'>
+                <strong>{isOpenArrays[cellIndex]?.[0] ? 'Read Less' : 'Read More'}</strong>
+            </button>
+
+            {item.list2 && (
+            <>
+            <li><span>{renderTextContent(item.list2)}</span></li>
+>>>>>>> parent of 80047ec (implementing useEffect)
             <button onClick={() => toggleIsOpen(cellIndex, 1)} className='readmore-button'>
                 <strong>{isOpenArrays[cellIndex]?.[1] ? 'Read Less' : 'Read More'}</strong>
             </button>
-            )}
             </>)}
 
             {item.list3 && (
             <>
+<<<<<<< HEAD
             <li><span style={isOpenArrays[cellIndex]?.[2] ? null : listStyle} ref={ref}>{renderTextContent(item.list3)}</span></li>
             {showReadMoreButton && (
+=======
+            <li><span>{renderTextContent(item.list3)}</span></li>
+>>>>>>> parent of 80047ec (implementing useEffect)
             <button onClick={() => toggleIsOpen(cellIndex, 2)} className='readmore-button'>
                 <strong>{isOpenArrays[cellIndex]?.[2] ? 'Read Less' : 'Read More'}</strong>
             </button>
-            )}
             </>)}
           </ul>
         </div>

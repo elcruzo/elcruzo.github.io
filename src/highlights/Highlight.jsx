@@ -14,6 +14,7 @@ const TwoColumnGrid = () => {
 
   const gridRef = useRef(null);
   const ref = useRef(null);
+  const liRef = useRef([]);
 
   const calculateRects = () => {
     requestAnimationFrame(() => {
@@ -44,11 +45,28 @@ const TwoColumnGrid = () => {
   }, [gridRef]);
 
   useLayoutEffect(() => {
-    if (ref.current) {
-        console.log(ref.current.scrollHeight, ref.current.clientHeight)
-        setShowReadMoreButton (ref.current.scrollHeight > ref.current.clientHeight)
-    }
-  }, []);
+    const calculateHeight = (index) => {
+      if (liRef.current[index] && liRef.current[index].current) {
+        console.log(liRef.current[index].current.scrollHeight, liRef.current[index].current.clientHeight);
+        setShowReadMoreButton(liRef.current[index].current.scrollHeight > liRef.current[index].current.clientHeight);
+      }
+    };
+
+    jsonData.forEach((item, cellIndex) => {
+      calculateHeight(cellIndex);
+
+      const handleResize = () => {
+        calculateHeight(cellIndex);
+      };
+
+      window.addEventListener('resize', handleResize);
+
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    });
+
+  }, [liRef]);
 
   const lines = cellsRect.flatMap((_, index) => {
     if (index % 2 === 0 && index > 0 && index <= cellsRect.length - 1) {
@@ -145,12 +163,18 @@ const TwoColumnGrid = () => {
           <h2 style={headerStyle}>{item.header}</h2>
           <p>{item.date}</p>
           <ul className='bulletpoints'>
-            <li><span style={isOpenArrays[cellIndex]?.[0] ? null : listStyle} ref={ref}>{renderTextContent(item.list1)}</span></li>
-            {showReadMoreButton && (
-            <button onClick={() => toggleIsOpen(cellIndex, 0)} className='readmore-button'>
-                <strong>{isOpenArrays[cellIndex]?.[0] ? 'Read Less' : 'Read More'}</strong>
-            </button>
-            )}
+          {item.lists.map((list, listItemIndex) => (
+              <li key={listItemIndex}>
+                <span style={isOpenArrays[cellIndex]?.[listItemIndex] ? null : listStyle} ref={liRef.current[cellIndex]}>
+                  {renderTextContent(list)}
+                </span>
+                {showReadMoreButton && (
+                  <button onClick={() => toggleIsOpen(cellIndex, listItemIndex)} className='readmore-button'>
+                    <strong>{isOpenArrays[cellIndex]?.[listItemIndex] ? 'Read Less' : 'Read More'}</strong>
+                  </button>
+                )}
+              </li>
+            ))}
 
             {item.list2 && (
             <>

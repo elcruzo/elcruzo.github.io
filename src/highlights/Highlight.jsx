@@ -181,7 +181,7 @@ return (
 
 function Highlight() {
 return (
-  <div className="App">
+  <div className="highlight-card">
     <TwoColumnGrid />
   </div>
 );

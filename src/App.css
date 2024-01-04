@@ -192,10 +192,7 @@
   display: inline-block;
 }
 
-.bulletpoints li span{
-  list-style-type: disc;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  display: -webkit-box;
+.button-div {
+  border: 1px solid black;
+  display: inline-block;
 }

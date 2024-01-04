@@ -10,8 +10,11 @@ const TwoColumnGrid = () => {
   const [cellsRect, setCellsRect] = useState([]);
 //   const [isOpenArray, setIsOpenArray] = useState(Array(jsonData.length).fill(false));
   const [isOpenArrays, setIsOpenArrays] = useState(Array(jsonData.length).fill([]));
+  const [showReadMoreButton, setShowReadMoreButton] = useState(false);
 
   const gridRef = useRef(null);
+  const ref = useRef(null);
+  const listRefs = Array.from({ length: jsonData.length }, () => useRef(null));
 
   const calculateRects = () => {
     requestAnimationFrame(() => {
@@ -42,28 +45,12 @@ const TwoColumnGrid = () => {
   }, [gridRef]);
 
   useLayoutEffect(() => {
-    const calculateHeight = (index) => {
-      if (liRef.current[index] && liRef.current[index].current) {
-        console.log(liRef.current[index].current.scrollHeight, liRef.current[index].current.clientHeight);
-        setShowReadMoreButton(liRef.current[index].current.scrollHeight > liRef.current[index].current.clientHeight);
-      }
-    };
-
-    jsonData.forEach((item, cellIndex) => {
-      calculateHeight(cellIndex);
-
-      const handleResize = () => {
-        calculateHeight(cellIndex);
-      };
-
-      window.addEventListener('resize', handleResize);
-
-      return () => {
-        window.removeEventListener('resize', handleResize);
-      };
-    });
-
-  }, [liRef]);
+    if (ref.current) {
+      console.log('scrollHeight:', ref.current.scrollHeight);
+      console.log('clientHeight:', ref.current.clientHeight);
+      setShowReadMoreButton (ref.current.scrollHeight > ref.current.clientHeight)
+    }
+  }, [isOpenArrays]);
 
   const lines = cellsRect.flatMap((_, index) => {
     if (index % 2 === 0 && index > 0 && index <= cellsRect.length - 1) {
@@ -96,12 +83,11 @@ const TwoColumnGrid = () => {
     const gridContainerStyle = {
     display: 'grid',
     gridTemplateColumns: 'repeat(2, 1fr)',
-    gridGap: '5rem', // Convert to rem
+    gridGap: '5rem', 
     position: 'relative',
-    maxWidth: '50rem', // Convert to rem, set your desired max-width
-    margin: '0 auto', // Center the container
+    maxWidth: '50rem',
+    margin: '0 auto',
   };
-
 
     const cellStyle = {
     backgroundColor: '#e0e0e0',
@@ -113,24 +99,25 @@ const TwoColumnGrid = () => {
   };
   
   const headerStyle = {
-    fontSize: '2rem', // Adjust the font size as needed
-    marginBottom: '1rem', // Adjust the margin as needed
+    fontSize: '2rem', 
+    marginBottom: '1rem', 
   };
+
 
   const listStyle = {
     listStyleType: 'disc',
-    WebkitLineClamp: 4,
+    WebkitLineClamp: 3,
     WebkitBoxOrient: 'vertical',
     overflow: 'hidden',
     display: '-webkit-box',
   }
 
-    const toggleIsOpen = (cellIndex, listItemIndex) => {
+  const toggleIsOpen = (cellIndex, listItemIndex) => {
     const newArrays = [...isOpenArrays];
     newArrays[cellIndex] = [...(newArrays[cellIndex] || [])];
     newArrays[cellIndex][listItemIndex] = !newArrays[cellIndex][listItemIndex];
     setIsOpenArrays(newArrays);
-    };
+  };
 
   return (
     <div ref={gridRef} style={gridContainerStyle} className="container">
@@ -159,28 +146,31 @@ const TwoColumnGrid = () => {
           <h2 style={headerStyle}>{item.header}</h2>
           <p>{item.date}</p>
           <ul className='bulletpoints'>
-
-            <li><span>{renderTextContent(item.list1)}</span></li>
+            <li><span style={isOpenArrays[cellIndex]?.[0] ? null : listStyle} ref={listRefs[cellIndex]}>{renderTextContent(item.list1)}</span></li>
+            {showReadMoreButton && (
             <button onClick={() => toggleIsOpen(cellIndex, 0)} className='readmore-button'>
                 <strong>{isOpenArrays[cellIndex]?.[0] ? 'Read Less' : 'Read More'}</strong>
             </button>
+            )}
 
             {item.list2 && (
             <>
-            <li><span>{renderTextContent(item.list2)}</span></li>
-
+            <li><span style={isOpenArrays[cellIndex]?.[1] ? null : listStyle} ref={listRefs[cellIndex + 1]}>{renderTextContent(item.list2)}</span></li>
+            {showReadMoreButton && (
             <button onClick={() => toggleIsOpen(cellIndex, 1)} className='readmore-button'>
                 <strong>{isOpenArrays[cellIndex]?.[1] ? 'Read Less' : 'Read More'}</strong>
             </button>
+            )}
             </>)}
 
             {item.list3 && (
             <>
-            <li><span>{renderTextContent(item.list3)}</span></li>
-
+            <li><span style={isOpenArrays[cellIndex]?.[2] ? null : listStyle} ref={listRefs[cellIndex + 2]}>{renderTextContent(item.list3)}</span></li>
+            {showReadMoreButton && (
             <button onClick={() => toggleIsOpen(cellIndex, 2)} className='readmore-button'>
                 <strong>{isOpenArrays[cellIndex]?.[2] ? 'Read Less' : 'Read More'}</strong>
             </button>
+            )}
             </>)}
           </ul>
         </div>
@@ -191,21 +181,10 @@ const TwoColumnGrid = () => {
 
 function Highlight() {
   return (
-    <div className="highlight-card">
+    <div className="App">
       <TwoColumnGrid />
     </div>
   );
 }
 
 export default Highlight;
-
-
-
-// {
-//     "id": 2,
-//     "header": "Student Government",
-//     "date": "2015 October",
-//     "list1": "Elected Head Boy in Primary 6 (equivalent to 5th Grade).",
-//     "list2": "Represented my school at the Annual Student Leadership Initiative Summit (SMI), winning first place in a mini-competition among 100+ schools.",
-//     "list3": "<a href='http://google.com/'>ColorStack</a>. t the Annual Student Leadership Initiative Summit (SMI), winning first place in a mini-competition among 100+ scholculator in Python"
-// },

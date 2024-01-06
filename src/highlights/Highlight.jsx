@@ -150,7 +150,7 @@ const TwoColumnGrid = () => {
           <p>{item.date}</p>
           <ul className='bulletpoints' ref={ref}>
             <li><span style={isOpenArrays[cellIndex]?.[0] ? null : listStyle}>{renderTextContent(item.list1)}</span></li>
-
+            {console.log(item.list.length())}
             <button onClick={() => toggleIsOpen(cellIndex, 0)} className='readmore-button'>
                 <strong>{isOpenArrays[cellIndex]?.[0] ? 'Read Less' : 'Read More'}</strong>
             </button>

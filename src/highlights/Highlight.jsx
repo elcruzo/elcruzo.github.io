@@ -146,7 +146,7 @@ return (
         <h2 style={headerStyle}>{item.header}</h2>
         <p>{item.date}</p>
         <ul className='bulletpoints'>
-          <li><span style={isOpenArrays[cellIndex]?.[0] ? null : listStyle} ref={listRefs[cellIndex]}>{renderTextContent(item.list1)}</span></li>
+          <li><span ref={listRefs[cellIndex]} style={isOpenArrays[cellIndex]?.[0] ? null : listStyle}>{renderTextContent(item.list1)}</span></li>
           {showReadMoreButton && (
           <button onClick={() => toggleIsOpen(cellIndex, 0)} className='readmore-button'>
               <strong>{isOpenArrays[cellIndex]?.[0] ? 'Read Less' : 'Read More'}</strong>
@@ -155,7 +155,7 @@ return (
 
           {item.list2 && (
           <>
-          <li><span style={isOpenArrays[cellIndex]?.[1] ? null : listStyle} ref={listRefs[cellIndex + 1]}>{renderTextContent(item.list2)}</span></li>
+          <li><span ref={listRefs[cellIndex]} style={isOpenArrays[cellIndex]?.[1] ? null : listStyle}>{renderTextContent(item.list2)}</span></li>
           {showReadMoreButton && (
           <button onClick={() => toggleIsOpen(cellIndex, 1)} className='readmore-button'>
               <strong>{isOpenArrays[cellIndex]?.[1] ? 'Read Less' : 'Read More'}</strong>
@@ -165,7 +165,7 @@ return (
 
           {item.list3 && (
           <>
-          <li><span style={isOpenArrays[cellIndex]?.[2] ? null : listStyle} ref={listRefs[cellIndex + 2]}>{renderTextContent(item.list3)}</span></li>
+          <li><span ref={listRefs[cellIndex]} style={isOpenArrays[cellIndex]?.[2] ? null : listStyle}>{renderTextContent(item.list3)}</span></li>
           {showReadMoreButton && (
           <button onClick={() => toggleIsOpen(cellIndex, 2)} className='readmore-button'>
               <strong>{isOpenArrays[cellIndex]?.[2] ? 'Read Less' : 'Read More'}</strong>

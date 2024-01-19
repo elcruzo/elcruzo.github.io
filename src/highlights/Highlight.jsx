@@ -129,6 +129,9 @@ const TwoColumnGrid = () => {
             {item.list3 && (
             <li><span style={listStyle}>{renderTextContent(item.list3)}</span></li>
             )}
+            {item.list4 && (
+            <li><span style={listStyle}>{renderTextContent(item.list4)}</span></li>
+            )}
           </ul>
         </div>
       ))}

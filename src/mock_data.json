@@ -67,6 +67,158 @@
         "list1": "Explored various programming languages, including C++, Java, SQL, and PHP.",
         "list2": "Refreshed my knowledge of Python syntax because I was getting rusty, Then I went further with the Django framework.",
         "list3": "Joined and became a core contributor of the OpenSource Community Africa (<a href='https://www.oscafrica.org/'>OSCA</a>), a community of developers."
+    },
+
+    {
+        "id": 9,
+        "header": "Dived in to the world of Cyber Security & Penetration Testing",
+        "date": "2020 November — December",
+        "list1": "Installed and experimented with the Linux Operating System for the first time, specifically Kali, for educational purposes.",
+        "list2": "Expanded my online presence, connecting with communities of individuals who continue to inspire me to this day.",
+        "list3": "Elected as the Senior Prefect Boy, serving as the head of the Student Body in high school."
+    },
+
+    {
+        "id": 10,
+        "header": "Science Fair",
+        "date": "2021 March",
+        "list1": "Chosen to represent my high school at the National Association of Private Proprietors (NAPPS) Science Fair, a regional science competition for private high schools.",
+        "list2": "Engineered a fully autonomous <a href='https://drive.google.com/drive/folders/1YJzrmU0RtOer-PoD2WsCXhYs5M86gMyz?usp=sharing'>Obstacle-Avoidance Robot</a> using <a href='https://www.arduino.cc'>Arduino</a>, a C++ framework. This project, based on my understanding of sound wave propagation principles, secured an impressive 3rd runner-up position among 600+ participants. Access the code <a href='https://github.com/elcruzo/obstacle-avoidance-robot'>here</a>."
+    },
+
+    {
+        "id": 11,
+        "header": "Networking",
+        "date": "2021 January — March",
+        "list1": "Became a member of the <a href='https://www.github.com/SoloLearn-Nigeria'>Sololearn Nigeria Community</a>.",
+        "list2": "Started learning ReactJS and explored NodeJS.",
+        "list3": "Participated in various tech conferences, seminars, and career-building workshops.",
+        "list4": "Served as the STEM President of my school after the Science Fair Competition"
+    },
+
+    {
+        "id": 12,
+        "header": "Graduated from High School at age 16",
+        "date": "2021 April — October",
+        "list1": "Took my senior year exams in high school.",
+        "list2": "Graduated as one of the best students with all As and got the overall best performance in the Unified Tertiary Matriculation Examination.",
+        "list3": "Received a cash prize of ₦120,000 from school alumni for being the best graduating student in ICT, among other awards."
+    },
+
+    {
+        "id": 13,
+        "header": "Joined GDSC",
+        "date": "2021 October",
+        "list1": "Explored Cryptocurrency & Blockchain",
+        "list2": "Authored articles on Dev.to and Forem while actively contributing to open-source projects."
+    },
+
+    {
+        "id": 14,
+        "header": "",
+        "date": "",
+        "list1": "",
+        "list2": "",
+        "list3": ""
+    },
+
+    {
+        "id": 15,
+        "header": "",
+        "date": "",
+        "list1": "",
+        "list2": "",
+        "list3": ""
+    },
+
+    {
+        "id": 16,
+        "header": "",
+        "date": "",
+        "list1": "",
+        "list2": "",
+        "list3": ""
+    },
+
+    {
+        "id": 17,
+        "header": "",
+        "date": "",
+        "list1": "",
+        "list2": "",
+        "list3": ""
+    },
+
+    {
+        "id": 18,
+        "header": "",
+        "date": "",
+        "list1": "",
+        "list2": "",
+        "list3": ""
+    },
+
+    {
+        "id": 19,
+        "header": "",
+        "date": "",
+        "list1": "",
+        "list2": "",
+        "list3": ""
+    },
+
+    {
+        "id": 20,
+        "header": "",
+        "date": "",
+        "list1": "",
+        "list2": "",
+        "list3": ""
+    },
+
+    {
+        "id": 21,
+        "header": "",
+        "date": "",
+        "list1": "",
+        "list2": "",
+        "list3": ""
+    },
+
+    {
+        "id": 22,
+        "header": "",
+        "date": "",
+        "list1": "",
+        "list2": "",
+        "list3": ""
+    },
+
+    {
+        "id": 23,
+        "header": "",
+        "date": "",
+        "list1": "",
+        "list2": "",
+        "list3": ""
+    },
+
+    {
+        "id": 24,
+        "header": "",
+        "date": "",
+        "list1": "",
+        "list2": "",
+        "list3": ""
+    },
+
+    {
+        "id": 25,
+        "header": "",
+        "date": "",
+        "list1": "",
+        "list2": "",
+        "list3": ""
     }
 ]
 

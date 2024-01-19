@@ -20,7 +20,7 @@
         "header" : "Middle School",
         "date" : "2018 June",
         "list1" : "Chosen to represent my school at the national math competition, <a href='https://en.wikipedia.org/wiki/Cowbellpedia'>Cowbellpedia</a>.",
-        "list2" : "Took my middle school final exams and graduated as the second-best overall student.",
+        "list2" : "Took my middle school final exams and graduated as the 2nd-best overall student.",
         "list3" : "Developed a keen interest in art and painted my friend in under an hour while he stood still.",
         "list4" : "Enrolled in soccer practice within my neighborhood & participating in communtiy sessions and sports."
     },
@@ -37,8 +37,8 @@
         "id" : 5,
         "header" : "Dived in to the world of coding!",
         "date" : "2019 May — August",
-        "list1" : "Learned the syntax of Python for the first time, marking the beginning of my programming journey.",
-        "list2" : "Developed my first program (a TicTacToe game) with Python.",
+        "list1" : "Learned the syntax of Python for the 1st time, marking the beginning of my programming journey.",
+        "list2" : "Developed my 1st program (a TicTacToe game) with Python.",
         "list3" : "Developed various games using Python, including Rock-Paper-Scissors, Simon Says, Hangman, and more. Check out the <a href='https://github.com/elcruzo/rock-paper-scissors'>code</a> for Rock-Paper-Scissors, the <a href='https://github.com/elcruzo/simon-says-game'>game</a> for Simon Says, and the <a href='https://github.com/elcruzo/gui-hangman'>Hangman game</a> along with <a href='https://github.com/stars/elcruzo/lists/misc-games'>other games</a> on my GitHub."
     },
 
@@ -73,7 +73,7 @@
         "id": 9,
         "header": "Dived in to the world of Cyber Security & Penetration Testing",
         "date": "2020 November — December",
-        "list1": "Installed and experimented with the Linux Operating System for the first time, specifically Kali, for educational purposes.",
+        "list1": "Installed and experimented with the Linux Operating System for the 1st time, specifically Kali, for educational purposes.",
         "list2": "Expanded my online presence, connecting with communities of individuals who continue to inspire me to this day.",
         "list3": "Elected as the Senior Prefect Boy, serving as the head of the Student Body in high school."
     },
@@ -110,115 +110,117 @@
         "header": "Joined GDSC",
         "date": "2021 October",
         "list1": "Explored Cryptocurrency & Blockchain",
-        "list2": "Authored articles on Dev.to and Forem while actively contributing to open-source projects."
+        "list2": "Authored articles on Dev.to and Forem while actively contributing to open-source projects.",
+        "list3": "Teamed up with a fellow developer to create CipherScape, an automated cryptocurrency bot for trading backtesting, algorithms, and EA systems."
     },
 
     {
         "id": 14,
-        "header": "",
-        "date": "",
-        "list1": "",
-        "list2": "",
-        "list3": ""
+        "header": "Dived into the world of ML & AI",
+        "date": "2021 December",
+        "list1": "Discovered a passion for Artificial Intelligence, took online courses on Machine & Deep Learning, and worked with Tableau and Power BI.",
+        "list2": "Collaborated with friends to research and explore the integration of Generative AI APIs into apps. Due to the intensive nature of the work, I took a coding break.",
+        "list3": "Enrolled in <a href='https://www.alxafrica.com'>ALX Africa</a>"
     },
 
     {
         "id": 15,
-        "header": "",
-        "date": "",
-        "list1": "",
-        "list2": "",
-        "list3": ""
+        "header": "Yet another Language Learning Rush",
+        "date": "2022 January — March",
+        "list1": "Embarked on another language learning rush by picking up VueJS and NextJS, and engaged in projects utilizing Heroku, Vercel, cPanel, MongoDB, MySQL, AWS, and Google Suite.",
+        "list2": "Tried to create a REST API for the 1st time."
     },
 
     {
         "id": 16,
-        "header": "",
-        "date": "",
-        "list1": "",
-        "list2": "",
-        "list3": ""
+        "header": "Personal Development",
+        "date": "2022 April — September",
+        "list1": "Currently participating in a Software Engineering internship at <a href='https://internship.zuri.team/'>Zuri Team, Inc</a>.",
+        "list2": "Created <a href='https://github.com/elcruzo/cipher-scape.git'>CipherScape v1.0.1</a> ~ a Telegram bot offering real-time stock data. Through integration of additional commands for diverse stock information, CipherScape garnered over 200 users shortly after launch."
     },
 
     {
         "id": 17,
-        "header": "",
-        "date": "",
-        "list1": "",
-        "list2": "",
-        "list3": ""
+        "header": "Got my first gig from tech!",
+        "date": "2022 July — December",
+        "list1": "Secured a significant role as the Lead Backend Developer, with some involvement in Frontend development, for <a href='https://www.thrida.com/'>Thrida</a>.",
+        "list2": "Contracted to develop a fully-fledged virtual cryptocurrency trading web application, designed to execute trading logic and function as a cryptocurrency wallet."
     },
 
     {
         "id": 18,
-        "header": "",
-        "date": "",
-        "list1": "",
-        "list2": "",
-        "list3": ""
+        "header": "College",
+        "date": "2022 December",
+        "list1": "Received nearly 15 admission decisions from prestigious colleges and universities in the United States, accompanied by substantial scholarship offers totaling at least $90,000 per year, renewable for four years.",
+        "list2": "Committed to <a href='https://www.howard.edu'>Howard University</a> to pursue a major in Electrical Engineering and a minor in Computer Science starting from the Fall 2023 semester."
     },
 
     {
         "id": 19,
-        "header": "",
-        "date": "",
-        "list1": "",
-        "list2": "",
-        "list3": ""
+        "header": "Travel",
+        "date": "2023 January — March",
+        "list1": "Collaborated with other developers on a contract basis to build a platform for the education academy <a href='https://www.afrelibai.academy/'>Afrelib</a>, making very little contribution to the codebase.",
+        "list2": "Travelled to the US with my parents and siblings.",
+        "list3": "Drove a car for the 1st time.",
+        "list4": "Began learning Spanish Language, thanks to <a href='https://www.duolingo.com/'>Duolingo</a>."
     },
 
     {
         "id": 20,
-        "header": "",
-        "date": "",
-        "list1": "",
-        "list2": "",
-        "list3": ""
+        "header": "Internship",
+        "date": "2023 March — May",
+        "list1": "Remotely interned with <a href='https://www.adcartechnology.com/'>Adcar Technology, LLC</a>, a tech consulting firm based in Chicago, IL, serving as a Volunteer Software Engineer.",
+        "list2": "Participated in a virtual internship program with <a href='https://www.hbcufirst.com/'>HBCU First</a>, powered by Indeed.",
+        "list3": "Became a member of <a href='https://www.colorstack.org/'>ColorStack</a>."
     },
 
     {
         "id": 21,
-        "header": "",
-        "date": "",
-        "list1": "",
-        "list2": "",
-        "list3": ""
+        "header": "Self Development",
+        "date": "2023 June",
+        "list1": "Developed <a href='https://github.com/elcruzo/shop_genius'>ShopGenius</a>, a web scraper tailored to collect user reviews, ratings, and product information from e-commerce websites such as Amazon, offering personalized recommendations to users."
     },
 
     {
         "id": 22,
-        "header": "",
-        "date": "",
-        "list1": "",
-        "list2": "",
-        "list3": ""
+        "header": "Self Development",
+        "date": "2023 June",
+        "list1": "Got accepted into the Paragon One x PwC Nonprofit Consulting and World Learning Inc. Fundraising Communication Strategy Remote Externship <a href='https://www.paragonone.com/externships/pwc-non-profit-consulting-remote-externship'>program</a>."
     },
 
     {
         "id": 23,
-        "header": "",
+        "header": "Self Development",
         "date": "",
-        "list1": "",
-        "list2": "",
-        "list3": ""
+        "list1": "Learned Recursion, Time, and Space Complexities in Data Structures & Algorithms with <a href='https://www.algoexpert.io/'>AlgoExpert</a>.",
+        "list2": "Admitted into <a href='https://www.codepath.org/courses/cybersecurity'>Codepath's Cybersecurity course</a> for Fall 2023.",
+        "list3": "Became a <a href='https://programs.code2040.org/pages/fellows'>Code2040</a> Fellow."
     },
 
     {
         "id": 24,
-        "header": "",
-        "date": "",
-        "list1": "",
-        "list2": "",
-        "list3": ""
+        "header": "Attended Virtual Conferences",
+        "date": "2023 July",
+        "list1": "Participated in the <a href='https://web.cvent.com/event/ea6c5f6a-a7fa-4f60-b211-f94a27a67bb2/websitePage:a3dfdaba-69c4-4712-b63f-474fe6d07f8e'>HP FOWA Future Tech Innovation Incubator Conference</a>.",
+        "list2": "Visited North Carolina for the 1st time!",
+        "list3": "Enrolled in the Computational Science and Engineering Course <a href='https://www.edx.org/course/introduction-to-computational-science-and-engineering'>CSE.0002x</a> sponsored by MIT."
     },
 
     {
         "id": 25,
-        "header": "",
+        "header": "Pre-resumption Preparations",
+        "date": "2023 August",
+        "list1": "Successfully concluded the internship program at HBCU First and shared a post about it on LinkedIn. Check out the post <a href='https://www.linkedin.com/posts/elcruzo_hbcu-hbcufirst-summerinternship-activity-7093243044140834816-XTe1?utm_source=share&utm_medium=member_desktop'>here</a>.",
+        "list2": "Accepted into <a href='https://itsmfleaders.org/'>ITSMF</a>, the Information Technology Senior Management Forum, a mentoring program and development organization dedicated to increasing young Black professionals in Technology."
+    },
+
+    {
+        "id": 26,
+        "header": "College resumption",
         "date": "",
-        "list1": "",
-        "list2": "",
-        "list3": ""
+        "list1": "Participated in the Howard University annual Day of Service (<a href='https://www.linkedin.com/posts/elcruzo_hudos-servicetocommunity-makinganimpact-activity-7099220949685678080-09En?utm_source=share&utm_medium=member_desktop'>HUDOS</a>).",
+        "list2": "Assumed an executive board position at the Howard University Nigerian Students Organization (<a href='https://www.instagram.com/hu_nso/'>HUNSO</a>) as a Freshman Liaison.",
+        "list3": "Contributed to the assembly of an autonomous robot with advanced features, showcased at a <a href='https://drive.google.com/drive/folders/186186kk5i4fAZHdCdHsh_rZtnZOeg3da?usp=drive_link'>Robotics Event</a> at Howard University."
     }
 ]
 

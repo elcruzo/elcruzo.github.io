@@ -8,47 +8,65 @@
 
     {
         "id" : 2,
-        "header" : "Dived in to the world of coding!",
-        "date" : "2019 May — August",
-        "list1" : "Learned the syntax of Python for the first time",
-        "list2" : "Designed a simple calculator in Python",
-        "list3" : "Built a TicTacToe game with Python"
+        "header" : "Elementary School",
+        "date" : "2015 October",
+        "list1" : "Elected Head Boy in 5th Grade (similar to Student Government President).",
+        "list2" : "Represented my school at an Annual Student Leadership Initiative Summit (SMI).",
+        "list3" : "Wrote the Common Entrance Examination (final elementary school exam) with one of the best results in my school."
     },
 
     {
         "id" : 3,
-        "header" : "Dived in to the world of coding!",
-        "date" : "2019 May — August",
-        "list1" : "Learned the syntax of Python for the first time",
-        "list2" : "Designed a simple calculator in Python",
-        "list3" : "Built a TicTacToe game with Python"
+        "header" : "Middle School",
+        "date" : "2018 June",
+        "list1" : "Chosen to represent my school at the national math competition, <a href='https://en.wikipedia.org/wiki/Cowbellpedia'>Cowbellpedia</a>.",
+        "list2" : "Took my middle school final exams and graduated as the second-best overall student.",
+        "list3" : "Developed a keen interest in art and painted my friend in under an hour while he stood still.",
+        "list4" : "Enrolled in soccer practice within my neighborhood & participating in communtiy sessions and sports."
     },
 
     {
         "id" : 4,
-        "header" : "Dived in to the world of coding!",
-        "date" : "2019 May — August",
-        "list1" : "Learned the syntax of Python for the first time",
-        "list2" : "Designed a simple calculator in Python",
-        "list3" : "Built a TicTacToe game with Python"
+        "header" : "Exceptional Leadership Abilities",
+        "date" : "2018 September — December",
+        "list1" : "Earned the role of school prefect during my freshman year of high school, a position typically reserved for Juniors and Seniors.",
+        "list2" : "Led an initiative to mobilize volunteers and prominent school alumni, successfully raising up to ₦100,000 for a charitable donation to a local orphanage near my school."
     },
 
     {
         "id" : 5,
         "header" : "Dived in to the world of coding!",
         "date" : "2019 May — August",
-        "list1" : "Learned the syntax of Python for the first time",
-        "list2" : "Designed a simple calculator in Python",
-        "list3" : "Built a TicTacToe game with Python  Head Boy in Primary 6 (equivalent to 5t  Head Boy in Primary 6 (equivalent to 5t  Head Boy in Primary 6 (equivalent to 5t  Head Boy in Primary 6 (equivalent to 5t  Head Boy in Primary 6 (equivalent to 5t  Head Boy in Primary 6 (equivalent to 5t"
+        "list1" : "Learned the syntax of Python for the first time, marking the beginning of my programming journey.",
+        "list2" : "Developed my first program (a TicTacToe game) with Python.",
+        "list3" : "Developed various games using Python, including Rock-Paper-Scissors, Simon Says, Hangman, and more. Check out the <a href='https://github.com/elcruzo/rock-paper-scissors'>code</a> for Rock-Paper-Scissors, the <a href='https://github.com/elcruzo/simon-says-game'>game</a> for Simon Says, and the <a href='https://github.com/elcruzo/gui-hangman'>Hangman game</a> along with <a href='https://github.com/stars/elcruzo/lists/misc-games'>other games</a> on my GitHub."
     },
 
     {
         "id": 6,
-        "header": "Student Government",
-        "date": "2015 October",
-        "list1": "Elected Head Boy in Primary 6 (equivalent to 5th Grade).",
-        "list2": "Represented my school at the Annual Student Leadership Initiative Summit (SMI), winning first place in a mini-competition among 100+ schools.",
-        "list3": "<a href='http://google.com/'>ColorStack</a>. t the Annual Student Leadership Initiative Summit (SMI), winning first place in a mini-competition among 100+ scholculator in Python"
+        "header": "Milestones",
+        "date": "2019 October",
+        "list1": "Began learning web development with HTML & CSS, thanks to <a href='https://www.w3schools.com'>W3Schools</a>.",
+        "list2": "Delved deeper into web development, acquiring proficiency in Bootstrap and SCSS syntax.",
+        "list3": "Joined the school team for 6-Aside, an inter-school soccer tournament held biennially."
+    },
+
+    {
+        "id": 7,
+        "header": "Dived in to the world of 3D Animation!",
+        "date": "2020 April",
+        "list1": "Joined the <a href='https://www.blender.org'>Blender</a> Community.",
+        "list2": "Made my first 3D-Model using Blender 3D.",
+        "list3": "Created a basic cartoon clip commercial for a friend's business using Blender."
+    },
+
+    {
+        "id": 8,
+        "header": "Language Learning Rush",
+        "date": "2020 May — November",
+        "list1": "Explored various programming languages, including C++, Java, SQL, and PHP.",
+        "list2": "Refreshed my knowledge of Python syntax because I was getting rusty, Then I went further with the Django framework.",
+        "list3": "Joined and became a core contributor of the OpenSource Community Africa (<a href='https://www.oscafrica.org/'>OSCA</a>), a community of developers."
     }
 ]
 

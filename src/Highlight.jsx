@@ -1,8 +1,8 @@
 import React, { useState, useRef, useLayoutEffect } from 'react';
-import jsonData from "../mock_data.json";
-import { createLine, createPath } from "../geometryUtils";
-import { renderTextContent } from "../textUtils";
-import '../App.css';
+import jsonData from "./mock_data.json";
+import { createLine, createPath } from "./geometryUtils";
+import { renderTextContent } from "./textUtils";
+import './App.css';
 
 const TwoColumnGrid = () => {
   const [secondCellMarginTop, setSecondCellMarginTop] = useState('');

@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 // import {Grid} from '@material-ui/core';
-import Highlight from './highlights/Highlight';
+import Highlight from './Highlight';
 
 
 function Timeline() {

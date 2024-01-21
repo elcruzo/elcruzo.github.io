@@ -217,7 +217,7 @@
     {
         "id": 26,
         "header": "College resumption",
-        "date": "",
+        "date": "2023 August",
         "list1": "Participated in the Howard University annual Day of Service (<a href='https://www.linkedin.com/posts/elcruzo_hudos-servicetocommunity-makinganimpact-activity-7099220949685678080-09En?utm_source=share&utm_medium=member_desktop'>HUDOS</a>).",
         "list2": "Assumed an executive board position at the Howard University Nigerian Students Organization (<a href='https://www.instagram.com/hu_nso/'>HUNSO</a>) as a Freshman Liaison.",
         "list3": "Contributed to the assembly of an autonomous robot with advanced features, showcased at a <a href='https://drive.google.com/drive/folders/186186kk5i4fAZHdCdHsh_rZtnZOeg3da?usp=drive_link'>Robotics Event</a> at Howard University."
@@ -225,11 +225,19 @@
 
     {
         "id": 27,
-        "header": "",
-        "date": "",
-        "list1": ""
-    }
+        "header": "Winner of 2023 FOWA Challenge!",
+        "date": "2023 August",
+        "list1": "Took on an E-board position at the Institute of Electrical and Electronics Engineers (<a href='https://www.ieee.org/'>IEEE</a>), Howard Chapter, as the Freshman Liaison for the 2023-2024 school year.",
+        "list2": "My team, consisting of Joseph Musenge and Ka'Pri Burden, emerged as the winners of the <a href='https://www.linkedin.com/posts/elcruzo_fowa2023-hbcu-fowa-activity-7122582548777431041-T_Ge?utm_source=share&utm_medium=member_desktop'>2023 HP FOWA Innovation Challenge</a>."
+    },
 
+    {
+        "id": 28,
+        "header": "Activities",
+        "date": "2023 August",
+        "list1": "Attended ColorStack's <a href='https://www.stackedupsummit.org'>Stacked Up Summit</a>.",
+        "list2": "Attended a virtual panel discussion titled 'Black Excellence: Celebrating Achievements and Inspiring Change'."
+    }
 ]
 
 

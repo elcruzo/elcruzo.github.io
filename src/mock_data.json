@@ -258,9 +258,29 @@
 
     {
         "id": 31,
-        "header": "Represented Howard at Harvard!",
+        "header": "Paragon One Ambassador",
         "date": "2023 October",
-        "list1": "Invited to be an ambassador for <a href='https://www.paragonone.com/'>Paragon One</a>."
+        "list1": "Invited to be an ambassador for <a href='https://www.paragonone.com/'>Paragon One</a>.",
+        "list2": "Successfully completed CodePath's Intro To Cybersecurity course. Find the certificate <a href='https://drive.google.com/file/d/1ZGL6AZKoOcNgkg1rwKavxe9SkuAZNyoI/view?usp=drivesdk'>here</a>.",
+        "list3": "Invited to attend the <a href='https://www.evercore.com/'>Evercore</a> Diversity Seminar in Washington, D.C."
+    },
+
+    {
+        "id": 32,
+        "header": "Participated in a lot of Competitions",
+        "date": "2023 November",
+        "list1": "Went to lunch with the Grad Dean of <a href='https://uci.edu/'>UCI</a> and explored potential research opportunities at a UC School.",
+        "list2" : "Competed in <a href='https://www.deloitte.com'>Deloitte's</a> Risk & Financial Advisory-Cyber Threat Competition.",
+        "list3": "Participated in the <a href='https://about.att.com/story/2023/rising-future-makers-showcase.html'>AT&T HBCU Innovation Challenge</a> alongside students from HBCUs nationwide."
+    },
+
+    {
+        "id": 33,
+        "header": "Participated in a lot of Competitions",
+        "date": "2023 November",
+        "list1": "Went to lunch with the Grad Dean of <a href='https://uci.edu/'>UCI</a> and explored potential research opportunities at a UC School.",
+        "list2" : "Competed in <a href='https://www.deloitte.com'>Deloitte's</a> Risk & Financial Advisory-Cyber Threat Competition.",
+        "list3": "Participated in the <a href='https://about.att.com/story/2023/rising-future-makers-showcase.html'>AT&T HBCU Innovation Challenge</a> alongside students from HBCUs nationwide."
     }
 ]
 

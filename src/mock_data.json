@@ -236,7 +236,51 @@
         "header": "Activities",
         "date": "2023 August",
         "list1": "Attended ColorStack's <a href='https://www.stackedupsummit.org'>Stacked Up Summit</a>.",
-        "list2": "Attended a virtual panel discussion titled 'Black Excellence: Celebrating Achievements and Inspiring Change'."
+        "list2": "Attended a virtual panel discussion titled 'Black Excellence: Celebrating Achievements and Inspiring Change'.",
+        "list3": "Accepted an invitation to join the Talent Community at <a href='https://www.wellsfargo.com/'>Wells Fargo</a>.",
+        "list4": "Welcomed into the <a href='https://www.gilead.com/careers/early-career-opportunities'>Gilead Early Talent Initiative</a>."
+    },
+
+    {
+        "id": 29,
+        "header": "Accepted into inSTEM!",
+        "date": "2023 September — October",
+        "list1": "Selected as one of the 15 students to join the esteemed <a href='https://www.linkedin.com/posts/elcruzo_instem-hu27-ntsmf-activity-7123043043514953728-Iy68?utm_source=share&utm_medium=member_desktop'>inSTEM Program</a> at Howard, sponsored by the National Science and Technology Medals Foundation.",
+        "list2": "Completed the <a href='http://click.paragonone.com/e/c/eyJlbWFpbF9pZCI6ImRnVHQ0Z1VBQUtUREJhUERCUUdMWFFRSzRVT2t3Y2RXOUtXRkJPMD0iLCJocmVmIjoiaHR0cHM6Ly93d3cuY3JlZGVudGlhbC5uZXQvYjA4ZWQwZDMtMmFiMS00YWUyLTkyMWItNmY2YWE3MzY0ZjEzIiwiaW50ZXJuYWwiOiJlZGUyMDUwMzkzMDRhNGMzMDUiLCJsaW5rX2lkIjo3NX0/0cca4f1434e5ac0f6478549190571155c372510d6be31b897ccce24ececd6063'>PwC and Paragon One Non-Profit Consulting and Fundraising Communication Strategy Remote Externship</a>."
+    },
+
+    {
+        "id": 30,
+        "header": "Represented Howard at Harvard!",
+        "date": "2023 October",
+        "list1": "Represented Howard University at the <a href='https://hackharvard.io/'>HackHarvard</a> Hackathon at Harvard, where my team, James Fei-Baffoe, Candice Hines, Nia Anderson, and I came up with a groundbreaking <a href='https://devpost.com/software/healthrev'>project</a> that will potentially reduce misdiagnosis in the healthcare industry by over 20%."
+    },
+
+    {
+        "id": 31,
+        "header": "Paragon One Ambassador",
+        "date": "2023 October",
+        "list1": "Invited to be an ambassador for <a href='https://www.paragonone.com/'>Paragon One</a>.",
+        "list2": "Successfully completed CodePath's Intro To Cybersecurity course. Find the certificate <a href='https://drive.google.com/file/d/1ZGL6AZKoOcNgkg1rwKavxe9SkuAZNyoI/view?usp=drivesdk'>here</a>.",
+        "list3": "Invited to attend the <a href='https://www.evercore.com/'>Evercore</a> Diversity Seminar in Washington, D.C."
+    },
+
+    {
+        "id": 32,
+        "header": "Participated in a lot of Competitions",
+        "date": "2023 November",
+        "list1": "Went to lunch with the Grad Dean of <a href='https://uci.edu/'>UCI</a> and explored potential research opportunities at a UC School.",
+        "list2" : "Competed in <a href='https://www.deloitte.com'>Deloitte's</a> Risk & Financial Advisory-Cyber Threat Competition.",
+        "list3": "Participated in the <a href='https://about.att.com/story/2023/rising-future-makers-showcase.html'>AT&T HBCU Innovation Challenge</a> alongside students from HBCUs nationwide."
+    },
+
+    {
+        "id": 33,
+        "header": "Participated in a lot of Competitions",
+        "date": "2023 November",
+        "list1": "Went to lunch with the Grad Dean of <a href='https://uci.edu/'>UCI</a> and explored potential research opportunities at a UC School.",
+        "list2" : "Competed in <a href='https://www.deloitte.com'>Deloitte's</a> Risk & Financial Advisory-Cyber Threat Competition.",
+        "list3": "Participated in the <a href='https://about.att.com/story/2023/rising-future-makers-showcase.html'>AT&T HBCU Innovation Challenge</a> alongside students from HBCUs nationwide."
     }
 ]
 

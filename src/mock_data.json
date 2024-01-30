@@ -286,22 +286,16 @@
         "id": 34,
         "header": "Received an offer from Meta!",
         "date": "2023 Decemeber",
-        "list1": "Secured a <a href='https://www.meta.com/'>Meta</a> internship post-birthday, excited to contribute to their dynamic team."
+        "list1": "Secured a <a href='https://www.meta.com/'>Meta</a> internship post-birthday, excited to contribute to their dynamic team.",
+        "list2": "Honored to be named to the Dean's List in the College of Engineering and Architecture."
     },
 
     {
         "id": 35,
         "header": "Spring Semester Begins!",
         "date": "2024 January",
-        "list1": "Honored to be named to the Dean's List in the College of Engineering and Architecture.",
-        "list2": "Successfully completed the HarvardX online course '<a href='https://courses.edx.org/certificates/7ab65d4267014159803308d63b029ec4'>TinyML</a>'."
-    },
-
-    {
-        "id": 36,
-        "header": "Joined a Research Program!",
-        "date": "2024 February",
-        "list1": "Got into an Undergraduate Research Program at Howard University's Artificial Intelligence/Machine Learning Consortium to Advance Health Equity and Researcher Diversity."
+        "list1": "Successfully completed the (<a href='https://courses.edx.org/certificates/7ab65d4267014159803308d63b029ec4'>TinyML</a>) HarvardX online course.",
+        "list2": "Got into an Undergraduate Research Program at Howard University's Artificial Intelligence/Machine Learning Consortium to Advance Health Equity and Researcher Diversity (<a href='https://www.aim-ahead.net/'>AIM-AHEAD</a>)."
     }
 ]
 

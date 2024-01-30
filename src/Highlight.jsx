@@ -114,7 +114,6 @@ const TwoColumnGrid = () => {
           key={cellIndex}
           style={{
             ...cellStyle,
-            backgroundColor: Math.floor(cellIndex / 2) % 2 === 0 ? 'white' : 'purple', // Alternating background colors in pairs
             gridRow: cellIndex === 0 ? 'span 1' : 'span 2',
             marginTop: cellIndex === 1 ? secondCellMarginTop : '',
           }}

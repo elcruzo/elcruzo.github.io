@@ -10,13 +10,13 @@ function Navbar() {
                     <a href="/aboutme">About Me</a>
                 </li>
                 <li>
-                    <a href="/resume">Resume</a>
+                    <a href="https://docs.google.com/document/d/19xVMNChFc0ccuvewNZunGhgSB8Pooy_y7fTLMMFtXCo/edit?usp=sharing">Resume</a>
                 </li>
                 <li>
                     <a href="/projects">Projects</a>
                 </li>
                 <li>
-                    <a href="/contact">Contact</a>
+                    <a href="http://www.linkedin.com/in/elcruzo/">Contact</a>
                 </li>
             </ul>
         </nav>

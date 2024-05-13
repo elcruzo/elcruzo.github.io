@@ -196,3 +196,11 @@
   border: 1px solid black;
   display: inline-block;
 }
+
+@media (max-width: 768px) {
+    .container {
+		grid-template-columns: 1fr;
+		grid-gap: 2rem; 
+		padding: 0 1rem;
+	}
+}

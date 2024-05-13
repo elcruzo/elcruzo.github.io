@@ -4,7 +4,7 @@ Welcome to my Timeline, nothing fancy here; it's more like a diary where stuff a
 
 ## Getting Started
 
-You can view this project on [Github Pages](https://github.com/elcruzo/elcruzo.github.io) or clone this repo.
+You can view this project on [Github Pages](elcruzo.github.io) or clone this repo.
 
 ### Prerequisites
 

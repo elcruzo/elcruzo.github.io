@@ -9,6 +9,7 @@ const TwoColumnGrid = () => {
   const [gridRect, setGridRect] = useState([]);
   const [cellsRect, setCellsRect] = useState([]);
   const gridRef = useRef(null);
+  const smallScreen = window.innerWidth < 420
 
   const calculateRects = () => {
     requestAnimationFrame(() => {
@@ -68,7 +69,7 @@ const TwoColumnGrid = () => {
 
   const gridContainerStyle = {
     display: 'grid',
-    gridTemplateColumns: 'repeat(2, 1fr)',
+    gridTemplateColumns: smallScreen ? '1fr' : 'repeat(2, 1fr)',
     gridGap: '5rem', 
     position: 'relative',
     maxWidth: '50rem',
@@ -110,7 +111,7 @@ const TwoColumnGrid = () => {
   return (
     <div ref={gridRef} style={gridContainerStyle} className="container">
       <svg
-        style={{
+        style={smallScreen ? {display : 'none'} : {
           position: 'absolute',
           zIndex: -1,
         }}

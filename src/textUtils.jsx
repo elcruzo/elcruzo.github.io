@@ -1,12 +1,13 @@
 import React from "react";
 
-export const renderTextContent = (text, color) => {
-    const linkStyle = {
-        color: color,
-        fontWeight: 'bold',
-        textDecoration: 'underline',
-    };
+const linkStyle = {
+    color: '#007bff', // Adjust the link color as needed
+    textDecoration: 'underline',
+    fontWeight: 'bold',
+  };
 
+
+export const renderTextContent = (text) => {
     const linkRegex = /<a.*?href=['"](.*?)['"].*?>(.*?)<\/a>/g;
   
     return text.split('\n').map((line, index) => (
@@ -15,7 +16,7 @@ export const renderTextContent = (text, color) => {
         {line.match(linkRegex) ? (
           line.split(linkRegex).map((part, i) => (
             i % 3 === 0 ? (
-              <span key={i} style={{ color }}>{part}</span>
+              <span key={i}>{part}</span>
             ) : (
               i % 3 === 1 ? (
                 <a 
@@ -23,9 +24,9 @@ export const renderTextContent = (text, color) => {
                 href={part} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                style={{ ...linkStyle, color }} 
-                onMouseEnter={(e) => e.currentTarget.style.textDecoration = 'underline'}
-                onMouseLeave={(e) => e.currentTarget.style.textDecoration = 'none'}
+                style={linkStyle} 
+                onMouseEnter={(e) => e.currentTarget.style.textDecoration = 'none'}
+                onMouseLeave={(e) => e.currentTarget.style.textDecoration = 'underline'}
                 >
                   {line.split(linkRegex)[i + 1]}
                 </a>
@@ -33,8 +34,8 @@ export const renderTextContent = (text, color) => {
             )
           ))
         ) : (
-          <span style={{ color }}>{line}</span>
+          <span>{line}</span>
         )}
       </React.Fragment>
     ));
-};
+  };

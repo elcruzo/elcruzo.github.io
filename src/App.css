@@ -186,11 +186,15 @@
 }
 
 .readmore-button {
-  border: none;
-  background-color: inherit;
-  padding: 14px Zopx; font-size: 16px; cursor: pointer;
-  display: inline-block;
-}
+	border: none;
+	background-color: inherit;
+	padding: 0;
+	font-size: 16px;
+	color: inherit;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: bold;
+  }
 
 .button-div {
   border: 1px solid black;
@@ -207,7 +211,6 @@
 } */
 
 @media (max-width: 768px) {
-
 	.greetings {
 		font-size: 1.375rem;
 	}
@@ -221,28 +224,23 @@
 	}
 	
     .container { 
-		padding: 0rem;
-    	margin-left: 0;
-		overflow-x: hidden;
-	}
+        display: block;
+        padding: 0rem;
+        margin-left: 0;
+        overflow-x: hidden;
+    }
 
-	.bulletpoints {
-		padding: 0;
-	}
+    .bulletpoints {
+        padding: 0;
+    }
 
-	.mb-4 {
-		max-width: 100%;
-		margin-left: 0;
-		margin-right: 0;
-	}
+    .mb-4 {
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
 
-	svg {
-		position: relative;
-		left: -14%;
-	}
-
-	/* .header-style {
-		font-size: '0.2rem'; 
-		margin-bottom: '0.5rem'
-	} */
+    svg {
+        display: none;
+    }
 }

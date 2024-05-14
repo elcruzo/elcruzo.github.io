@@ -9,6 +9,7 @@ const TwoColumnGrid = () => {
   const [gridRect, setGridRect] = useState([]);
   const [cellsRect, setCellsRect] = useState([]);
   const gridRef = useRef(null);
+  const smallScreen = window.innerWidth < 420
 
   const calculateRects = () => {
     requestAnimationFrame(() => {
@@ -68,7 +69,7 @@ const TwoColumnGrid = () => {
 
   const gridContainerStyle = {
     display: 'grid',
-    gridTemplateColumns: 'repeat(2, 1fr)',
+    gridTemplateColumns: smallScreen ? '1fr' : 'repeat(2, 1fr)',
     gridGap: '5rem', 
     position: 'relative',
     maxWidth: '50rem',
@@ -81,10 +82,21 @@ const TwoColumnGrid = () => {
     fontWeight: 'bolder',
   };
   
-  const cellStyle = {
-    backgroundColor: '#e0e0e0',
+  const cellWhiteStyle = {
+    backgroundColor: '#FFFFFF', // Solid white background
+    color: '#635BE6', // Purple text color
     padding: '2.25rem',
-    border: '0.0625rem solid #ccc',
+    border: '0.1875rem solid #635BE6', // Thicker purple outline (3px)
+    overflow: 'hidden',
+    borderRadius: '1.5rem',
+    margin: '0 auto',
+  };
+
+  const cellPurpleStyle = {
+    backgroundColor: '#635BE6', // Purple background
+    color: '#FFFFFF', // White text color
+    padding: '2.25rem',
+    border: '0.1875rem solid #635BE6', // Thicker purple outline (3px)
     overflow: 'hidden',
     borderRadius: '1.5rem',
     margin: '0 auto',
@@ -99,7 +111,7 @@ const TwoColumnGrid = () => {
   return (
     <div ref={gridRef} style={gridContainerStyle} className="container">
       <svg
-        style={{
+        style={smallScreen ? {display : 'none'} : {
           position: 'absolute',
           zIndex: -1,
         }}
@@ -114,7 +126,7 @@ const TwoColumnGrid = () => {
         <div
           key={cellIndex}
           style={{
-            ...cellStyle,
+            ...(cellIndex % 2 === 0 ? cellWhiteStyle : cellPurpleStyle),
             gridRow: cellIndex === 0 ? 'span 1' : 'span 2',
             marginTop: cellIndex === 1 ? secondCellMarginTop : '',
           }}

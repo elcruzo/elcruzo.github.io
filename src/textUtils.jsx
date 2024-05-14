@@ -2,7 +2,8 @@ import React from "react";
 
 const linkStyle = {
     color: '#007bff', // Adjust the link color as needed
-    textDecoration: 'none',
+    textDecoration: 'underline',
+    fontWeight: 'bold',
   };
 
 
@@ -24,8 +25,8 @@ export const renderTextContent = (text) => {
                 target="_blank" 
                 rel="noopener noreferrer" 
                 style={linkStyle} 
-                onMouseEnter={(e) => e.currentTarget.style.textDecoration = 'underline'}
-                onMouseLeave={(e) => e.currentTarget.style.textDecoration = 'none'}
+                onMouseEnter={(e) => e.currentTarget.style.textDecoration = 'none'}
+                onMouseLeave={(e) => e.currentTarget.style.textDecoration = 'underline'}
                 >
                   {line.split(linkRegex)[i + 1]}
                 </a>

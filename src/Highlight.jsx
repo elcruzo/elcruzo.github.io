@@ -1,4 +1,4 @@
-import React, { useState, useRef, useLayoutEffect } from 'react';
+import React, { useState, useRef, useEffect, useLayoutEffect } from 'react';
 import jsonData from "./mock_data.json";
 import { createLine, createPath } from "./geometryUtils";
 import { renderTextContent } from "./textUtils";
@@ -75,6 +75,12 @@ const TwoColumnGrid = () => {
     margin: '0 auto',
   };
   
+  const headerStyle = {
+    fontSize: '1.2rem',
+    marginBottom: '1rem',
+    fontWeight: 'bolder',
+  };
+  
   const cellStyle = {
     backgroundColor: '#e0e0e0',
     padding: '2.25rem',
@@ -82,11 +88,6 @@ const TwoColumnGrid = () => {
     overflow: 'hidden',
     borderRadius: '1.5rem',
     margin: '0 auto',
-  };
-  
-  const headerStyle = {
-    fontSize: '2rem', 
-    marginBottom: '1rem', 
   };
 
   const listStyle = {

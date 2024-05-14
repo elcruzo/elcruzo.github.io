@@ -82,9 +82,9 @@ const TwoColumnGrid = () => {
   };
   
   const cellStyle = {
-    backgroundColor: '#e0e0e0',
+    backgroundColor: '#FFFFFF',
     padding: '2.25rem',
-    border: '0.0625rem solid #ccc',
+    border: '0.1875rem solid #635BE6',
     overflow: 'hidden',
     borderRadius: '1.5rem',
     margin: '0 auto',

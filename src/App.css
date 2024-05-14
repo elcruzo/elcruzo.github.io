@@ -207,6 +207,18 @@
 } */
 
 @media (max-width: 768px) {
+
+	.greetings {
+		font-size: 1.375rem;
+	}
+
+	.intro-1 {
+		font-size: 1.85rem;
+	}
+
+	.intro-2 {
+		max-width: 100%;
+	}
 	
     .container { 
 		padding: 0rem;
@@ -215,7 +227,7 @@
 	}
 
 	.bulletpoints {
-		padding-left: 0rem;
+		padding: 0;
 	}
 
 	.mb-4 {

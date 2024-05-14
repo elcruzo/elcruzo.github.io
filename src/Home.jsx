@@ -12,7 +12,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 function Home() {
     return (
-        <>
+        <div className='overall-home-style'>
           <Navbar />
 
           <div className='row'>
@@ -79,7 +79,7 @@ function Home() {
           <div className='row'>
               <Timeline />
           </div>
-        </>
+        </div>
     )
 }
 

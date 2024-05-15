@@ -194,7 +194,7 @@
 	cursor: pointer;
 	display: inline-block;
 	font-weight: bold;
-  }
+}
 
 .button-div {
   border: 1px solid black;
@@ -233,5 +233,6 @@
         max-width: 100%;
         margin-left: 0;
         margin-right: 0;
+		margin-top: 1rem;
     }
 }

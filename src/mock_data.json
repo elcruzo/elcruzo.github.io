@@ -10,7 +10,7 @@
         "id" : 2,
         "header" : "Elementary School",
         "date" : "2015 October",
-        "list1" : "Elected Head Boy in 5th Grade (similar to Student Government President).",
+        "list1" : "Elected Head Boy (Student Government President) in 5th Grade.",
         "list2" : "Represented my school at an Annual Student Leadership Initiative Summit (SMI).",
         "list3" : "Wrote the Common Entrance Examination (final elementary school exam) with one of the best results in my school."
     },
@@ -191,7 +191,7 @@
     {
         "id": 23,
         "header": "Self Development",
-        "date": "",
+        "date": "2023 June",
         "list1": "Learned Recursion, Time, and Space Complexities in Data Structures & Algorithms with <a href='https://www.algoexpert.io/'>AlgoExpert</a>.",
         "list2": "Admitted into <a href='https://www.codepath.org/courses/cybersecurity'>Codepath's Cybersecurity course</a> for Fall 2023.",
         "list3": "Became a <a href='https://programs.code2040.org/pages/fellows'>Code2040</a> Fellow."

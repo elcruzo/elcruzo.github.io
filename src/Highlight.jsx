@@ -105,7 +105,7 @@ const TwoColumnGrid = () => {
 
   const listStyle = {
     listStyleType: 'disc',
-    // overflow: 'visible',
+    overflow: 'invisible',
     display: 'block',
   };
 

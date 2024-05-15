@@ -111,11 +111,10 @@ const TwoColumnGrid = () => {
 
   // Function to handle toggling of expanded state for text
   const handleToggle = (index) => {
-    setExpanded((prevExpanded) => {
-      const newExpanded = [...prevExpanded];
-      newExpanded[index] = !newExpanded[index];
-      return newExpanded;
-    });
+    setExpanded((prevState) => ({
+      ...prevState,
+      [index]: !prevState[index], // Toggle the expanded state for the specific bullet point
+    }));
   };
 
   useEffect(() => {
@@ -138,7 +137,7 @@ const TwoColumnGrid = () => {
     const maxHeight = lineHeight ? parseFloat(lineHeight) * 3 : '3.6em';
 
     const bulletPointStyle = {
-      overflow: 'hidden', // Always hide overflow
+      overflow: smallScreen ? 'visible' : 'hidden',
       maxHeight: isExpanded ? 'none' : maxHeight,
       textOverflow: 'ellipsis', // Add text overflow ellipsis
     };

@@ -226,7 +226,7 @@
     }
 
     .bulletpoints {
-        padding-left: 2rem;
+        padding-left: 0;
 		list-style-type: disc;
     }
 

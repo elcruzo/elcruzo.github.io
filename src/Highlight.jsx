@@ -136,10 +136,15 @@ const TwoColumnGrid = () => {
     const lineHeight = lineHeights.current[index];
     const maxHeight = lineHeight ? parseFloat(lineHeight) * 3 : '3.6em';
 
+    const bulletPointStyle = {
+      overflow: smallScreen ? 'visible' : 'hidden', // Apply overflow: hidden only for non-mobile devices
+      maxHeight: isExpanded ? 'none' : maxHeight,
+    };
+
     return (
       <div>
         <div
-          style={{ overflow: 'hidden', maxHeight: isExpanded ? 'none' : maxHeight }} // Limit the height for truncation
+          style={bulletPointStyle} // Limit the height for truncation
           ref={(el) => (bulletRefs.current[index] = el)}
         >
           {renderTextContent(text, color)} {/* Pass color to renderTextContent */}

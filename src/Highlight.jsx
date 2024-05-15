@@ -105,16 +105,17 @@ const TwoColumnGrid = () => {
 
   const listStyle = {
     listStyleType: 'disc',
-    overflow: 'visible',
+    // overflow: 'visible',
     display: 'block',
   };
 
   // Function to handle toggling of expanded state for text
   const handleToggle = (index) => {
-    setExpanded((prevState) => ({
-      ...prevState,
-      [index]: !prevState[index], // Toggle the expanded state for the specific bullet point
-    }));
+    setExpanded((prevExpanded) => {
+      const newExpanded = [...prevExpanded];
+      newExpanded[index] = !newExpanded[index];
+      return newExpanded;
+    });
   };
 
   useEffect(() => {

@@ -105,6 +105,7 @@ const TwoColumnGrid = () => {
 
   const listStyle = {
     listStyleType: 'disc',
+    overflow: 'visible',
     display: 'block',
   };
 
@@ -136,8 +137,9 @@ const TwoColumnGrid = () => {
     const maxHeight = lineHeight ? parseFloat(lineHeight) * 3 : '3.6em';
 
     const bulletPointStyle = {
-      overflow: smallScreen ? 'visible' : 'hidden', // Apply overflow: hidden only for non-mobile devices
+      overflow: 'hidden', // Always hide overflow
       maxHeight: isExpanded ? 'none' : maxHeight,
+      textOverflow: 'ellipsis', // Add text overflow ellipsis
     };
 
     return (

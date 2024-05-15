@@ -8,6 +8,7 @@ const TwoColumnGrid = () => {
   const [secondCellMarginTop, setSecondCellMarginTop] = useState('');
   const [gridRect, setGridRect] = useState([]);
   const [cellsRect, setCellsRect] = useState([]);
+  const [expanded, setExpanded] = useState({});
   const gridRef = useRef(null);
   const smallScreen = window.innerWidth < 420
 
@@ -77,8 +78,8 @@ const TwoColumnGrid = () => {
   };
   
   const headerStyle = {
-    fontSize: '1.2rem',
-    marginBottom: '1rem',
+    fontSize: '1.45rem',
+    marginBottom: '1.75rem',
     fontWeight: 'bolder',
   };
   
@@ -108,6 +109,31 @@ const TwoColumnGrid = () => {
     display: 'block',
   }
 
+  const handleToggle = (index) => {
+    setExpanded((prevState) => ({
+      ...prevState,
+      [index]: !prevState[index],
+    }));
+  };
+
+  const renderBulletPoints = (text, index, cellIndex) => {
+    const maxLines = 3;
+    const isExpanded = expanded[index];
+    const truncatedText = isExpanded ? text : text.split('\n').slice(0, maxLines).join('\n');
+    const color = cellIndex % 2 === 0 ? '#635BE6' : '#FFFFFF'; // Alternating text colors
+
+    return (
+      <div>
+        {renderTextContent(truncatedText, color)} {/* Pass color to renderTextContent */}
+        {text.split('\n').length > maxLines && (
+          <button className="readmore-button" onClick={() => handleToggle(index)}>
+            {isExpanded ? 'See less' : '...Read more'}
+          </button>
+        )}
+      </div>
+    );
+  };
+
   return (
     <div ref={gridRef} style={gridContainerStyle} className="container">
       <svg
@@ -127,23 +153,23 @@ const TwoColumnGrid = () => {
           key={cellIndex}
           style={{
             ...(cellIndex % 2 === 0 ? cellWhiteStyle : cellPurpleStyle),
-            gridRow: cellIndex === 0 ? 'span 1' : 'span 2',
-            marginTop: cellIndex === 1 ? secondCellMarginTop : '',
+            gridRow: smallScreen ? 'span 1' : (cellIndex === 0 ? 'span 1' : 'span 2'),
+            marginTop: smallScreen ? '1rem' : (cellIndex === 1 ? secondCellMarginTop : ''),
           }}
           className="mb-4"
         >
           <h2 style={headerStyle}>{item.header}</h2>
           <p>{item.date}</p>
           <ul className='bulletpoints'>
-            <li><span style={listStyle}>{renderTextContent(item.list1)}</span></li>
+            <li><span style={listStyle}>{renderBulletPoints(item.list1, cellIndex * 4, cellIndex)}</span></li>
             {item.list2 && (
-            <li><span style={listStyle}>{renderTextContent(item.list2)}</span></li>
+            <li><span style={listStyle}>{renderBulletPoints(item.list2, cellIndex * 4 + 1, cellIndex)}</span></li>
             )}
             {item.list3 && (
-            <li><span style={listStyle}>{renderTextContent(item.list3)}</span></li>
+            <li><span style={listStyle}>{renderBulletPoints(item.list3, cellIndex * 4 + 2, cellIndex)}</span></li>
             )}
             {item.list4 && (
-            <li><span style={listStyle}>{renderTextContent(item.list4)}</span></li>
+            <li><span style={listStyle}>{renderBulletPoints(item.list4, cellIndex * 4 + 3, cellIndex)}</span></li>
             )}
           </ul>
         </div>

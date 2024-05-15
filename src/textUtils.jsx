@@ -1,13 +1,13 @@
 import React from "react";
 
-const linkStyle = {
-    color: '#007bff', // Adjust the link color as needed
+const linkStyle = (color) => ({
+    color: color, // Adjust the link color as needed
     textDecoration: 'underline',
     fontWeight: 'bold',
-  };
+  });
 
 
-export const renderTextContent = (text) => {
+  export const renderTextContent = (text, color) => {
     const linkRegex = /<a.*?href=['"](.*?)['"].*?>(.*?)<\/a>/g;
   
     return text.split('\n').map((line, index) => (
@@ -20,13 +20,13 @@ export const renderTextContent = (text) => {
             ) : (
               i % 3 === 1 ? (
                 <a 
-                key={i} 
-                href={part} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                style={linkStyle} 
-                onMouseEnter={(e) => e.currentTarget.style.textDecoration = 'none'}
-                onMouseLeave={(e) => e.currentTarget.style.textDecoration = 'underline'}
+                  key={i} 
+                  href={part} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  style={linkStyle(color)} // Apply the dynamic link color
+                  onMouseEnter={(e) => e.currentTarget.style.textDecoration = 'none'}
+                  onMouseLeave={(e) => e.currentTarget.style.textDecoration = 'underline'}
                 >
                   {line.split(linkRegex)[i + 1]}
                 </a>

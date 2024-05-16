@@ -52,6 +52,11 @@
 	text-decoration: none;
 	cursor: pointer;
 }
+
+.nav-link.active {
+	font-weight: bold;
+	color: #635BE6;
+}
   
 .nav-item:hover {
 	background-color: #777;
@@ -287,6 +292,11 @@ margin-top: 10vh;
 
 	.navbar-nav {
 		gap: 1rem;
+	}
+
+	.nav-link.active {
+		font-weight: bold;
+		color: white;
 	}
 
 	.greetings {

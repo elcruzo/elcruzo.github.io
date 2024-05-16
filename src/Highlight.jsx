@@ -9,9 +9,8 @@ const TwoColumnGrid = () => {
   const [gridRect, setGridRect] = useState([]);
   const [cellsRect, setCellsRect] = useState([]);
   const [expanded, setExpanded] = useState({}); // State to manage expanded text for each bullet point
-  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 420);
   const gridRef = useRef(null);
-  // const smallScreen = window.innerWidth < 420;
+  const smallScreen = window.innerWidth < 420;
   const bulletRefs = useRef([]); // Refs to track bullet points
   const lineHeights = useRef([]); // Refs to track line heights of bullet points
 
@@ -40,17 +39,6 @@ const TwoColumnGrid = () => {
       window.removeEventListener('resize', calculateRects);
     };
   }, [gridRef]);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsSmallScreen(window.innerWidth < 420);
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
 
   const lines = cellsRect.flatMap((_, index) => {
     if (index % 2 === 0 && index > 0 && index <= cellsRect.length - 1) {
@@ -82,7 +70,7 @@ const TwoColumnGrid = () => {
 
   const gridContainerStyle = {
     display: 'grid',
-    gridTemplateColumns: isSmallScreen ? '1fr' : 'repeat(2, 1fr)',
+    gridTemplateColumns: smallScreen ? '1fr' : 'repeat(2, 1fr)',
     gridGap: '5rem', 
     position: 'relative',
     maxWidth: '50rem',
@@ -118,7 +106,8 @@ const TwoColumnGrid = () => {
   const listStyle = {
     listStyleType: 'disc',
     overflow: 'visible',
-    display: 'block',
+    display: 'flex', // Display flex to ensure bullet points show
+    flexDirection: 'column',
   };
 
   // Function to handle toggling of expanded state for text
@@ -147,17 +136,16 @@ const TwoColumnGrid = () => {
     const color = cellIndex % 2 === 0 ? '#635BE6' : '#FFFFFF'; // Alternating text colors
     const lineHeight = lineHeights.current[index];
     const maxHeight = lineHeight ? parseFloat(lineHeight) * 3 : '3.6em';
-    const maxHeightStyle = isSmallScreen ? { maxHeight: 'none' } : { maxHeight: isExpanded ? 'none' : maxHeight };
 
     return (
       <div>
         <div
-          style={{ overflow: 'hidden', ...maxHeightStyle }} // Limit the height for truncation
+          style={{ overflow: 'hidden', maxHeight: isExpanded ? 'none' : maxHeight }} // Limit the height for truncation
           ref={(el) => (bulletRefs.current[index] = el)}
         >
           {renderTextContent(text, color)} {/* Pass color to renderTextContent */}
         </div>
-        {!isSmallScreen && bulletRefs.current[index] && bulletRefs.current[index].scrollHeight > maxHeight && ( // Show "Read more" button if text exceeds maxLines
+        {bulletRefs.current[index] && bulletRefs.current[index].scrollHeight > maxHeight && ( // Show "Read more" button if text exceeds maxLines
           <button className="readmore-button" onClick={() => handleToggle(index)}>
             {isExpanded ? 'See less' : '...Read more'} {/* Toggle button text */}
           </button>
@@ -169,7 +157,7 @@ const TwoColumnGrid = () => {
   return (
     <div ref={gridRef} style={gridContainerStyle} className="container">
       <svg
-        style={isSmallScreen ? {display : 'none'} : {
+        style={smallScreen ? {display : 'none'} : {
           position: 'absolute',
           zIndex: -1,
         }}
@@ -185,8 +173,8 @@ const TwoColumnGrid = () => {
           key={cellIndex}
           style={{
             ...(cellIndex % 2 === 0 ? cellWhiteStyle : cellPurpleStyle),
-            gridRow: isSmallScreen ? 'span 1' : (cellIndex === 0 ? 'span 1' : 'span 2'), // Adjust for mobile
-            marginTop: isSmallScreen ? '1rem' : (cellIndex === 1 ? secondCellMarginTop : ''), // Adjust for mobile
+            gridRow: smallScreen ? 'span 1' : (cellIndex === 0 ? 'span 1' : 'span 2'), // Adjust for mobile
+            marginTop: smallScreen ? '1rem' : (cellIndex === 1 ? secondCellMarginTop : ''), // Adjust for mobile
           }}
           className="mb-4"
         >

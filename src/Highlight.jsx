@@ -189,7 +189,7 @@ const TwoColumnGrid = () => {
         >
           <h2 style={headerStyle}>{item.header}</h2>
           <p>{item.date}</p>
-          <ul className='bulletpoints'>
+          <ul className='bulletpoints list-style-custom'>
             <li><span style={listStyle}>{renderBulletPoints(item.list1, cellIndex * 4, cellIndex)}</span></li>
             {item.list2 && (
             <li><span style={listStyle}>{renderBulletPoints(item.list2, cellIndex * 4 + 1, cellIndex)}</span></li>

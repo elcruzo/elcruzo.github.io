@@ -1,3 +1,7 @@
+.hamburger {
+    display: none;
+}
+
 .nav {
   background-color: white;
   color: #000;
@@ -21,7 +25,7 @@
   color: #635BE6;
 }
 
-.nav ul {
+.entire-bar ul {
   color: #000;
   padding: 0;
   margin: 0;
@@ -30,7 +34,7 @@
   gap: 1rem;
 }
 
-.nav a {
+header a {
   color: inherit;
   text-decoration: none;
   height: 100%;
@@ -236,4 +240,77 @@
         margin-right: 0;
 		margin-top: 1rem;
     }
+
+	.button-1, .button-2 {
+		font-size: 1rem;
+	}
+
+	.entire-bar {
+		position: absolute;
+        height: 0;
+        top: 2rem;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background-color: gray;
+        transition: 0.5s;
+		overflow: hidden;
+	}
+
+	.entire-bar ul {
+		display: block;
+		width: fit-content;
+        margin: 0.6rem auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+		opacity: 0;
+	}
+
+	.entire-bar ul li a {
+		margin-bottom: 0.6rem;
+	}
+
+	.entire-bar .active {
+		height: 12.5rem;
+	}
+
+	.entire-bar .active ul {
+		opacity: 1;
+	}
+
+	.navbar-list-item {
+		font-size: 0.98rem;
+	}
+
+	.rotate180{
+        transform: rotate(180deg);
+    }
+
+	.hamburger {
+		display: block;
+		cursor: pointer
+	}
+	
+	.hamburger .line1 {
+		width: 1.25rem;
+		height: 0.2rem;
+		background-color: black;
+		margin: 0.4rem 0;
+	}
+	
+	.hamburger .line2 {
+		width: 1.5rem;
+		height: 0.2rem;
+		background-color: black;
+		margin: 0.4rem 0;
+	}
+	
+	.hamburger .line3 {
+		width: 1rem;
+		height: 0.2rem;
+		background-color: black;
+		margin: 0.4rem 0;
+	}
+	
+	
 }

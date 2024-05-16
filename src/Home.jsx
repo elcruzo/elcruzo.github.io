@@ -13,6 +13,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 function Home() {
     return (
         <div className='overall-home-style'>
+          {/* <a href="/" className="logo" title='elcruzo_logo'><span className='alt-color'>El</span>Cruzo</a> */}
           <Navbar />
 
           <div className='row'>

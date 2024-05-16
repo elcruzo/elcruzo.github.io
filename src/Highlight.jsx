@@ -78,7 +78,7 @@ const TwoColumnGrid = () => {
   };
 
   const headerStyle = {
-    fontSize: '1.75rem',
+    fontSize: '1.5rem',
     marginBottom: '1.5rem',
     fontWeight: 'bolder',
   };

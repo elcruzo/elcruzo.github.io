@@ -9,15 +9,10 @@ const TwoColumnGrid = () => {
   const [gridRect, setGridRect] = useState([]);
   const [cellsRect, setCellsRect] = useState([]);
   const [expanded, setExpanded] = useState({}); // State to manage expanded text for each bullet point
-  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 420);
   const gridRef = useRef(null);
-  // const smallScreen = window.innerWidth < 420;
+  const smallScreen = window.innerWidth < 420;
   const bulletRefs = useRef([]); // Refs to track bullet points
   const lineHeights = useRef([]); // Refs to track line heights of bullet points
-
-  const handleResize = () => {
-    setIsSmallScreen(window.innerWidth < 420);
-  };
 
   const calculateRects = () => {
     requestAnimationFrame(() => {
@@ -36,10 +31,6 @@ const TwoColumnGrid = () => {
     });
   };
 
-  useEffect(() => {
-    handleResize();
-  })
-
   useLayoutEffect(() => {
     calculateRects();
     window.addEventListener('resize', calculateRects);
@@ -47,7 +38,7 @@ const TwoColumnGrid = () => {
     return () => {
       window.removeEventListener('resize', calculateRects);
     };
-  }, [gridRef]);  
+  }, [gridRef]);
 
   const lines = cellsRect.flatMap((_, index) => {
     if (index % 2 === 0 && index > 0 && index <= cellsRect.length - 1) {
@@ -79,7 +70,7 @@ const TwoColumnGrid = () => {
 
   const gridContainerStyle = {
     display: 'grid',
-    gridTemplateColumns: isSmallScreen ? '1fr' : 'repeat(2, 1fr)',
+    gridTemplateColumns: smallScreen ? '1fr' : 'repeat(2, 1fr)',
     gridGap: '5rem', 
     position: 'relative',
     maxWidth: '50rem',
@@ -87,7 +78,7 @@ const TwoColumnGrid = () => {
   };
 
   const headerStyle = {
-    fontSize: '1.5rem',
+    fontSize: '1.75rem',
     marginBottom: '1.5rem',
     fontWeight: 'bolder',
   };
@@ -165,7 +156,7 @@ const TwoColumnGrid = () => {
   return (
     <div ref={gridRef} style={gridContainerStyle} className="container">
       <svg
-        style={isSmallScreen ? {display : 'none'} : {
+        style={smallScreen ? {display : 'none'} : {
           position: 'absolute',
           zIndex: -1,
         }}
@@ -181,8 +172,8 @@ const TwoColumnGrid = () => {
           key={cellIndex}
           style={{
             ...(cellIndex % 2 === 0 ? cellWhiteStyle : cellPurpleStyle),
-            gridRow: isSmallScreen ? 'span 1' : (cellIndex === 0 ? 'span 1' : 'span 2'), // Adjust for mobile
-            marginTop: isSmallScreen ? '1rem' : (cellIndex === 1 ? secondCellMarginTop : ''), // Adjust for mobile
+            gridRow: smallScreen ? 'span 1' : (cellIndex === 0 ? 'span 1' : 'span 2'), // Adjust for mobile
+            marginTop: smallScreen ? '1rem' : (cellIndex === 1 ? secondCellMarginTop : ''), // Adjust for mobile
           }}
           className="mb-4"
         >

@@ -106,8 +106,7 @@ const TwoColumnGrid = () => {
   const listStyle = {
     listStyleType: 'disc',
     overflow: 'visible',
-    display: 'flex', // Display flex to ensure bullet points show
-    flexDirection: 'column',
+    display: 'block',
   };
 
   // Function to handle toggling of expanded state for text

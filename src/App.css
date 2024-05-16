@@ -205,6 +205,12 @@ margin-top: 10vh;
 	width: 100%;
 }
 
+.list-style-custom {
+	list-style: disc;
+	list-style-position: inside;
+	padding-left: 0.2em;
+} 
+
 @media (max-width: 768px) {
 	.greetings {
 		font-size: 1.375rem;

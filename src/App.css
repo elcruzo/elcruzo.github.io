@@ -243,6 +243,16 @@ margin-top: 10vh;
 	padding-left: 0.2em;
 } 
 
+.project-container {
+	margin: auto;
+}
+
+.bi-box-arrow-up-right {
+	font-size: 1.2rem;
+	color: white;
+	padding: 0;
+}
+
 @media only screen and (max-width: 768px) {
 	.header-nav {
 		justify-content: space-between;
@@ -332,5 +342,14 @@ margin-top: 10vh;
 
 	.button-1, .button-2 {
 		font-size: 0.9rem;
+	}
+}
+
+@media (min-width: 768px) {
+	.project-container {
+		display: flex;
+		justify-content: center;
+		max-width: 800px;
+		margin: auto;
 	}
 }

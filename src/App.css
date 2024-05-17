@@ -55,7 +55,8 @@
 
 .nav-link.active {
 	font-weight: bold;
-	color: #635BE6;
+	color: inherit;
+	background-color: #635BE6;
 }
   
 .nav-item:hover {

@@ -1,10 +1,21 @@
 import React from 'react';
 import '../App.css';
+import ProjectsGrid from '../ProjectsGrid';
+import Navbar from '../Navbar';
 
 
 function Projects() {
     return (
-        <h1>Projects</h1>
+        <div className="App">
+            <Navbar />
+            
+            <header className="App-header">
+                <h1>My Portfolio</h1>
+            </header>
+            <main>
+                <ProjectsGrid />
+            </main>
+        </div>
     )
 }
 

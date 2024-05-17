@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect, useLayoutEffect } from 'react';
-import jsonData from "./mock_data.json";
+import jsonData from "./data/highlights_data.json";
 import { createLine, createPath } from "./geometryUtils";
 import { renderTextContent } from "./textUtils";
 import './App.css';

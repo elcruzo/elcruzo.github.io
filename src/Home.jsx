@@ -1,8 +1,10 @@
 import React from 'react';
 import './index.css';
+import './App.css'
 import Navbar from './Navbar';
 import Timeline from './Timeline';
 import { Link } from 'react-router-dom';
+import myHeadshot from './assets/elcruzo_headshot.jpeg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF } from '@fortawesome/free-brands-svg-icons';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons';
@@ -22,6 +24,10 @@ function Home() {
               <h2 className='intro-1'>I&#39;m Ayomide <span className='alt-color'>Adekoya</span></h2>
               <h2 className='intro-1'>Backend Developer&#46;</h2>
             </div>
+
+            {/* <div className='col-md-6 picture-container'>
+              <img src={myHeadshot} className="headshot" alt="elcruzo_headshot" />
+            </div> */}
           </div>
 
           <div className='row'>

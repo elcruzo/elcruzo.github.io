@@ -18,6 +18,12 @@
 	text-transform: capitalize;
 }
 
+.headshot {
+	width: 300px;
+	height: auto;
+	border-bottom: 5px solid #635BE6;
+}
+
 .nav {
 	color: #000;
 	transition: transform 0.3s ease;
@@ -295,6 +301,10 @@ margin-top: 10vh;
 
 	header .responsive-nav {
 		transform: translateY(0);
+	}
+
+	.headshot {
+		display: none;
 	}
 	
 	.logo {

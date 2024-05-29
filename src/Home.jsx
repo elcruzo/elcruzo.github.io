@@ -4,7 +4,7 @@ import './App.css'
 import Navbar from './Navbar';
 import Timeline from './Timeline';
 import { Link } from 'react-router-dom';
-import myHeadshot from './assets/elcruzo_headshot.jpeg';
+// import myHeadshot from './assets/elcruzo_headshot.jpeg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF } from '@fortawesome/free-brands-svg-icons';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons';

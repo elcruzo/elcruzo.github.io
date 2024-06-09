@@ -22,7 +22,7 @@ function Home() {
             <div className='col-md-6'>
               <h3 className='greetings'>Hi there&#44;</h3>
               <h2 className='intro-1'>I&#39;m Ayomide <span className='alt-color'>Adekoya</span></h2>
-              <h2 className='intro-1'>Backend Developer&#46;</h2>
+              <h2 className='intro-1'>Full Stack Developer&#46;</h2>
             </div>
 
             {/* <div className='col-md-6 picture-container'>
